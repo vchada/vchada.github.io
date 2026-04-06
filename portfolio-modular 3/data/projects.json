@@ -1,0 +1,62 @@
+{
+  "project1": {
+    "title": "Loan and Agreement Sync Platform",
+    "role": "Lead Backend Engineer @ Zions Bancorp",
+    "description": "Developed a comprehensive enterprise microservices platform that seamlessly integrates Salesforce nCino Bulk API with Enterprise Data Warehouse for real-time loan data synchronization.",
+    "details": [
+      "Architected scalable Spring Boot microservices handling 50,000+ daily transactions",
+      "Implemented robust error handling and retry mechanisms for API integration",
+      "Designed PostgreSQL database schema optimized for high-volume data processing",
+      "Developed RESTful APIs for internal application consumption",
+      "Integrated AWS CloudWatch for monitoring and alerting",
+      "Achieved 99.9% uptime and reduced data sync latency by 60%"
+    ],
+    "technologies": ["Spring Boot", "Salesforce API", "PostgreSQL", "AWS", "Docker", "Jenkins"],
+    "impact": "Reduced manual data reconciliation efforts by 80% and improved loan processing efficiency across the organization."
+  },
+  "project2": {
+    "title": "AWS Cloud Migration Dashboard",
+    "role": "Full Stack Architect",
+    "description": "Built a comprehensive React-based dashboard application for visualizing real-time cloud migration metrics and resource utilization across multiple AWS accounts.",
+    "details": [
+      "Developed responsive React frontend with Redux for state management",
+      "Implemented AWS Lambda functions for real-time data aggregation",
+      "Utilized DynamoDB for scalable, low-latency data storage",
+      "Integrated CloudWatch metrics and custom monitoring solutions",
+      "Created interactive charts and visualizations using D3.js",
+      "Implemented authentication using AWS Cognito"
+    ],
+    "technologies": ["React", "Redux", "AWS Lambda", "DynamoDB", "API Gateway", "CloudWatch"],
+    "impact": "Provided real-time visibility into migration progress, reducing migration timeline by 25% through data-driven decision making."
+  },
+  "project3": {
+    "title": "QA Automation Framework for Microservices",
+    "role": "Automation Architect",
+    "description": "Designed and implemented a comprehensive hybrid testing framework combining Selenium and TestNG for automated testing of microservices architecture.",
+    "details": [
+      "Built modular test automation framework supporting UI and API testing",
+      "Integrated with Jenkins CI/CD pipeline for automated test execution",
+      "Implemented parallel test execution using Selenium Grid",
+      "Created detailed test reports with screenshots and logs",
+      "Dockerized test environment for consistent execution",
+      "Reduced regression testing time from 3 days to 8 hours"
+    ],
+    "technologies": ["Selenium", "TestNG", "Jenkins", "Docker", "REST Assured", "Maven"],
+    "impact": "Increased test coverage by 75% and reduced production defects by 60% through early detection of issues."
+  },
+  "project4": {
+    "title": "Portfolio Website Platform",
+    "role": "Open Source Project",
+    "description": "Modern, performant portfolio website built with React and Next.js, featuring integrated blog, analytics dashboard, and automated deployment pipeline.",
+    "details": [
+      "Developed with Next.js for optimal performance and SEO",
+      "Implemented MDX for rich blog content with code highlighting",
+      "Integrated Google Analytics for visitor tracking",
+      "Automated deployment to Vercel with GitHub Actions",
+      "Achieved 95+ Lighthouse score across all metrics",
+      "Implemented dark mode and responsive design"
+    ],
+    "technologies": ["React", "Next.js", "MDX", "Vercel", "Tailwind CSS", "GitHub Actions"],
+    "impact": "Created a reusable template for developers to showcase their work, with 500+ stars on GitHub."
+  }
+}

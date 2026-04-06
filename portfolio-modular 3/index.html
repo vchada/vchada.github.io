@@ -1,0 +1,3076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Venkat Chada - Java Full Stack Engineer with 13 years of experience in enterprise software development, cloud architecture, AWS, Spring Boot, React, and DevOps">
+    <meta name="keywords" content="Java Full Stack Engineer, Spring Boot, AWS, React, Microservices, DevOps, Terraform, Cloud Architecture">
+    <meta property="og:title" content="Venkat Chada - Java Full Stack Engineer">
+    <meta property="og:description" content="13 years of experience building scalable cloud-native applications">
+    <meta property="og:type" content="website">
+    <title>Venkat Chada - Java Full Stack Engineer Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-bg: #ffffff;
+            --secondary-bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-primary: #2c3e50;
+            --text-secondary: #5a6c7d;
+            --accent: #3498db;
+            --accent-hover: #2980b9;
+            --border: #e1e8ed;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        [data-theme="dark"] {
+            --primary-bg: #1a1a2e;
+            --secondary-bg: #16213e;
+            --card-bg: #0f3460;
+            --text-primary: #eaeaea;
+            --text-secondary: #b8b8b8;
+            --accent: #e94560;
+            --accent-hover: #c93652;
+            --border: #2d3748;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--card-bg);
+            box-shadow: 0 2px 10px var(--shadow);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .theme-toggle {
+            background: var(--accent);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            background: linear-gradient(135deg, var(--secondary-bg) 0%, var(--primary-bg) 100%);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text .tagline {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .hero-text p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-placeholder {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: var(--gradient-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+            color: white;
+            box-shadow: 0 10px 40px var(--shadow);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-1);
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        #about {
+            background: var(--secondary-bg);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .about-text {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .career-timeline {
+            margin-top: 3rem;
+        }
+
+        .timeline-item {
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 3px 10px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+        }
+
+        .timeline-item h3 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Tech Stack Section */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tech-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: all 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .tech-card:nth-child(1) { border-top-color: #667eea; }
+        .tech-card:nth-child(2) { border-top-color: #f093fb; }
+        .tech-card:nth-child(3) { border-top-color: #4facfe; }
+        .tech-card:nth-child(4) { border-top-color: #43e97b; }
+        .tech-card:nth-child(5) { border-top-color: #fa709a; }
+
+        .tech-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        .tech-card h3 {
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .tech-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .tech-list li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tech-list li::before {
+            content: '▹';
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            background: var(--secondary-bg);
+        }
+
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border: 2px solid var(--accent);
+            background: transparent;
+            color: var(--accent);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px var(--shadow);
+        }
+
+        .project-image {
+            height: 200px;
+            background: var(--gradient-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .project-card:nth-child(2) .project-image { background: var(--gradient-2); }
+        .project-card:nth-child(3) .project-image { background: var(--gradient-3); }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .project-role {
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-tag {
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        /* Certifications Section */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .cert-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: scale(1.05);
+        }
+
+        .cert-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .cert-card:nth-child(2) .cert-icon { background: var(--gradient-2); }
+        .cert-card:nth-child(3) .cert-icon { background: var(--gradient-3); }
+
+        .cert-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-issuer {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-date {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Blog Section */
+        #blog {
+            background: var(--secondary-bg);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .blog-thumbnail {
+            height: 200px;
+            background: var(--gradient-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .blog-card:nth-child(2) .blog-thumbnail { background: var(--gradient-2); }
+        .blog-card:nth-child(3) .blog-thumbnail { background: var(--gradient-3); }
+        .blog-card:nth-child(4) .blog-thumbnail { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content h3 {
+            margin-bottom: 1rem;
+        }
+
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .blog-tag {
+            background: var(--secondary-bg);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Contact Section */
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--border);
+            border-radius: 5px;
+            background: var(--primary-bg);
+            color: var(--text-primary);
+            font-family: inherit;
+            transition: border 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        .contact-note {
+            text-align: center;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-top: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--card-bg);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            color: var(--text-secondary);
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: var(--accent-hover);
+            transform: translateY(-5px);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 100%;
+            position: relative;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: var(--accent);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background: var(--card-bg);
+                width: 100%;
+                padding: 2rem;
+                box-shadow: 0 5px 20px var(--shadow);
+                transition: right 0.3s ease;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .profile-placeholder {
+                width: 250px;
+                height: 250px;
+                font-size: 6rem;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .tech-grid,
+            .projects-grid,
+            .cert-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                padding: 2rem 1.5rem;
+            }
+        }
+        .social-links {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 12px;
+            margin: 1rem 0;
+        }
+        .social-links img {
+            display: block;
+            cursor: pointer;
+        }
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image .profile-photo {
+            width: 430px;              /* increase width */
+            height: 430px;             /* same height for perfect circle */
+            border-radius: 50%;        /* circular shape */
+            object-fit: cover;         /* preserves aspect ratio */
+            border: 4px solid #fff;    /* optional clean border */
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* optional subtle depth */
+        }
+        .company-logo {
+            width: 250px;          /* adjust to fit nicely with text */
+            height: auto;
+            vertical-align: middle;
+            margin-right: 10px;   /* spacing between logo and title */
+            object-fit: contain;
+        }
+
+        h3 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h3 em {
+            font-style: italic;
+            color: #333;          /* subtle emphasis */
+        }
+
+        h3 .duration {
+            margin-left: 6px;
+            font-weight: normal;
+            color: #666;
+            font-size: 0.95em;
+        }
+        /* Tech Tree Styles - ADD THIS TO YOUR <style> SECTION */
+
+        /* Tech Tree Container */
+        .tech-tree {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Category Container */
+        .tech-category {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .tech-category:hover {
+            box-shadow: 0 5px 20px var(--shadow);
+        }
+
+        /* Category Header (Clickable) */
+        .tech-category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.3s ease;
+        }
+
+        .tech-category-header:hover {
+            background: var(--secondary-bg);
+        }
+
+        .tech-category-header.active {
+            background: var(--secondary-bg);
+            border-bottom: 2px solid var(--accent);
+        }
+
+        /* Expand/Collapse Icon */
+        .expand-icon {
+            font-size: 1rem;
+            color: var(--accent);
+            transition: transform 0.3s ease;
+            display: inline-block;
+            min-width: 20px;
+        }
+
+        .tech-category-header.active .expand-icon {
+            transform: rotate(90deg);
+        }
+
+        /* Category Icon */
+        .category-icon {
+            font-size: 2rem;
+        }
+
+        /* Category Title */
+        .tech-category-header h3 {
+            flex: 1;
+            margin: 0;
+            font-size: 1.3rem;
+        }
+
+        /* Item Count Badge */
+        .item-count {
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Category Content (Expandable) */
+        .tech-category-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            padding: 0 1.5rem;
+        }
+
+        .tech-category-header.active + .tech-category-content {
+            max-height: 2000px;
+            padding: 1.5rem;
+            transition: max-height 0.5s ease-in;
+        }
+
+        /* Subcategory */
+        .tech-subcategory {
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-subcategory:last-child {
+            margin-bottom: 0;
+        }
+
+        .tech-subcategory h4 {
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tech-subcategory h4::before {
+            content: '→';
+            color: var(--accent);
+        }
+
+        /* Tech Tags Container */
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        /* Individual Tech Badge */
+        .tech-badge {
+            background: var(--secondary-bg);
+            color: var(--text-primary);
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .tech-badge:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px var(--shadow);
+        }
+
+        /* Responsive Design for Tech Tree */
+        @media (max-width: 768px) {
+            .tech-category-header {
+                padding: 1rem;
+                gap: 0.5rem;
+            }
+
+            .tech-category-header h3 {
+                font-size: 1.1rem;
+            }
+
+            .category-icon {
+                font-size: 1.5rem;
+            }
+
+            .item-count {
+                font-size: 0.75rem;
+                padding: 0.2rem 0.6rem;
+            }
+
+            .tech-category-content {
+                padding: 0 1rem;
+            }
+
+            .tech-category-header.active + .tech-category-content {
+                padding: 1rem;
+            }
+
+            .tech-badge {
+                font-size: 0.75rem;
+                padding: 0.3rem 0.7rem;
+            }
+        }
+
+        /* Animation for expanding */
+        @keyframes expandDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tech-category-header.active + .tech-category-content .tech-subcategory {
+            animation: expandDown 0.4s ease-out;
+        }
+    
+/* Additional CSS for Enhanced Project Cards - ADD TO YOUR <style> SECTION */
+
+/* Project Highlights Section */
+.project-highlights {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--secondary-bg);
+    border-radius: 8px;
+    border-left: 3px solid var(--accent);
+}
+
+.highlight-item {
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.highlight-item::before {
+    content: '';
+    min-width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-top: 0.5rem;
+}
+
+/* Project Role Styling */
+.project-role {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    display: inline-block;
+}
+
+/* Enhanced Project Card on Hover */
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px var(--shadow);
+}
+
+/* Project Image Size */
+.project-image {
+    font-size: 4rem;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--secondary-bg) 0%, var(--card-bg) 100%);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Filter Button Active State Enhancement */
+.filter-btn.active {
+    background: var(--accent);
+    color: white;
+    transform: scale(1.05);
+}
+
+.filter-btn {
+    transition: all 0.3s ease;
+}
+
+/* Project Tech Tags Enhancement */
+.tech-tag {
+    background: var(--accent);
+    color: white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent);
+    cursor: default;
+}
+
+.tech-tag:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+/* Dark mode tech tags */
+[data-theme="dark"] .tech-tag {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+[data-theme="dark"] .tech-tag:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+/* Projects Grid - Ensure 3 columns */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-highlights {
+        padding: 0.8rem;
+    }
+    
+    .highlight-item {
+        font-size: 0.85rem;
+    }
+}
+
+/* Section Header Enhancement */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+
+/* Fade-in animation for portfolio */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* FIX 2: Modal Popup Styles - ADD THIS CSS */
+
+/* Modal Overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 9998;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: block;
+}
+
+/* Modal Container */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    overflow: hidden;
+    animation: slideUp 0.4s ease;
+}
+
+.modal.active {
+    display: block;
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+    color: white;
+    position: relative;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 2rem;
+    max-height: calc(85vh - 180px);
+    overflow-y: auto;
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: var(--secondary-bg);
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+.modal-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+.modal-highlights {
+    margin: 2rem 0;
+}
+
+.modal-highlights h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.modal-highlight-item {
+    padding: 0.8rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-highlight-item:last-child {
+    border-bottom: none;
+}
+
+.modal-highlight-item::before {
+    content: '✅';
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.modal-tech {
+    margin-top: 2rem;
+}
+
+.modal-tech h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.modal-tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.modal-tech-tag {
+    background: var(--accent);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 2px solid var(--accent);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Project Card Cursor */
+.project-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px var(--shadow);
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+    .modal {
+        width: 95%;
+        max-height: 90vh;
+    }
+    
+    .modal-header {
+        padding: 1.5rem;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+    
+    .modal-description {
+        font-size: 1rem;
+    }
+    
+    .modal-tech-tag {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+</style>
+</head>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">VC</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Tech Stack</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()">🌓 Theme</button></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>I'm Venkat Chada</h1>
+                    <p class="tagline">Lead Full Stack Java Developer | 12+ Years | Spring Boot | AWS | Microservices | Angular | DevOps</p>
+                    <p>Senior Software Engineer with 12+ years of expertise in architecting enterprise solutions across banking, insurance, and healthcare sectors. Proven track record of leading teams, delivering scalable microservices, and implementing cloud-native applications on AWS. Currently driving innovation at GEICO.</p>
+                    <!-- 🔗 Social Links Section -->
+                    <div class="social-links">
+                        <a href="https://github.com/vchada" target="_blank">
+                            <img src="assets/images/github-icon.png" alt="GitHub" width="50" height="50">
+                        </a>
+                        <a href="https://www.linkedin.com/in/venkat-chada-67bbb6125/" target="_blank">
+                            <img src="assets/images/linkedin-icon.png" alt="LinkedIn" width="32" height="32">
+                        </a>
+                        <a href="mailto:chada.venkata@gmail.com">
+                            <img src="assets/images/email-icon.png" alt="Email" width="32" height="32">
+                        </a>
+                    </div>
+                    <!-- End Social Links Section -->
+                    <div class="cta-buttons">
+                        <a href="./resume/Venkata_Chada_Resume.docx" class="btn btn-primary" download>📄 Download Resume</a>
+                        <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
+                    </div>
+
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/venkat-profile-2.jpg" alt="Venkat Chada" class="profile-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Hi, I’m <strong>Venkat Chada</strong> — a Staff Engineer and AI Architect passionate about building scalable,
+                        intelligent systems that connect modern enterprise software with real-world impact.
+                        Over the years, I’ve worked across full-stack development, cloud architecture, and automation —
+                        primarily using <strong>Java Spring Boot, AWS, Python, and DevOps CI/CD</strong> workflows.
+                    </p>
+
+                    <p>
+                        My work blends deep backend engineering with AI-driven innovation.
+                        I’ve designed and deployed machine learning services using <strong>TensorFlow, PyTorch, and Scikit-learn</strong>,
+                        integrated into microservices running on <strong>AWS ECS Fargate and Lambda</strong>.
+                        I enjoy translating complex data science models into production-ready APIs that deliver real-time intelligence,
+                        automation, and measurable business outcomes.
+                    </p>
+
+                    <p>
+                        I’m constantly exploring how cloud platforms and AI frameworks can simplify customer experiences,
+                        improve decision-making, and create more adaptive enterprise systems.
+                        When I’m not developing, I spend time studying new AI trends, refining automation pipelines,
+                        and mentoring teams on practical ways to bring intelligence into software products.
+                    </p>
+
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">☕ Backend & Architecture</h3>
+                    <p>Deep expertise in <strong>Java/J2EE ecosystem</strong> spanning Core Java (Collections, Multithreading, Data Structures, Exception Handling), and advanced frameworks. Extensive experience building <strong>Spring Boot microservices</strong> using Spring Core, Spring MVC, Spring AOP, Spring Web Services, and Spring Cloud for distributed systems. Proficient in implementing <strong>MVC architectures</strong> with both Spring and Struts frameworks.</p>
+
+                    <p>Skilled in <strong>database technologies</strong> including Oracle, DB2, MySQL, and MongoDB for NoSQL solutions. Implemented robust persistence layers using <strong>Hibernate ORM</strong>, JDBC, and developed complex PL/SQL stored procedures and triggers. Expertise in <strong>API development</strong> - designed and implemented RESTful services using JAX-RS, Jersey, and SOAP-based web services with WSDL, UDDI, JAX-WS.</p>
+
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">☁️ Cloud & DevOps</h3>
+                    <p>Extensive <strong>AWS cloud experience</strong> including Lambda functions (Node.js for serverless architectures), DynamoDB, S3, CloudWatch monitoring, API Gateway for access control and security policies. Designed and deployed <strong>AWS Connect contact center solutions</strong> integrating Amazon Lex for intelligent IVR workflows, real-time customer support automation, call recording, and dynamic routing through parameterized Lambda functions.</p>
+
+                    <p>Expert in <strong>Infrastructure as Code</strong> using Terraform - created reusable modules and scripts for automated AWS resource provisioning, ensuring consistency and scalability. Proficient with <strong>containerization and orchestration</strong>: managed Docker images and containers, implemented Kubernetes clusters for microservices with deployments, services, ingress controllers, auto-scaling, and high availability. Established <strong>CI/CD pipelines</strong> using Jenkins, GitHub Actions, Maven, and Ant, achieving 95% deployment success rates.</p>
+
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">Agentic AI & LLM Experience on AWS</h3>
+                        <p>
+                            Recently, I’ve been leading projects that combine <strong>Agentic AI principles and Large Language Models (LLMs)</strong>
+                            to transform how enterprise systems handle voice and chat interactions.
+                            I implemented an <strong>Agentic AI IVR system on AWS Connect</strong> that uses reasoning-driven LLMs
+                            for intelligent intent recognition, dynamic call routing, and self-learning conversation flows.
+                        </p>
+
+                        <p>
+                            The platform integrates <strong>Amazon Lex V2 bots, AWS Lambda, and Spring Boot microservices</strong> with
+                            OpenAI and Bedrock LLM APIs to enable autonomous multi-agent conversations across channels like voice, chat, and email.
+                            Each agent handles tasks such as context retrieval, workflow execution, and decision support — reducing manual intervention and enhancing customer experience significantly.
+                        </p>
+
+                        <p>
+                            The system is deployed on <strong>AWS ECS Fargate</strong> with real-time monitoring via CloudWatch and X-Ray, and leverages
+                            <strong>DynamoDB and S3</strong> for stateful memory and context storage.
+                            Through this architecture, I’ve been able to bring the emerging paradigm of autonomous LLM agents into production-grade enterprise environments.
+                        </p>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">🎨 Frontend & Full Stack</h3>
+                    <p>Proficient in modern frontend development with <strong>Angular</strong> - created single-page applications with Angular Material, developed responsive B2B applications, implemented automation scripts using Protractor and Karma. Experience with <strong>React</strong> for building interactive UIs, state management with Redux. Strong foundation in <strong>web technologies</strong>: HTML5, CSS3, JavaScript, jQuery for AJAX calls and asynchronous requests, Google Web Toolkit (GWT) for enterprise applications, and Vaadin components as widgets.</p>
+
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">🔧 Integration & Messaging</h3>
+                    <p>Implemented <strong>enterprise integration patterns</strong> using Spring Integration for complex integration flows coordinating communication between systems. Extensive experience with <strong>messaging systems</strong>: ActiveMQ and JMS for queue and topic configurations, enabling efficient message communication and managing events across distributed systems. Integrated <strong>SSO mechanisms</strong> for seamless authentication, implemented Spring Security for access control policies, and configured IBM WebSeal for secure authentication and authorization.</p>
+
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">📊 Data & Analytics</h3>
+                    <p>Proficient in <strong>data processing technologies</strong>: created ETL jobs using Pentaho and Talend for business analysis reports, implemented Elasticsearch for advanced query processing and optimization, developed search engines using Apache Lucene and SOLR with indexing on MongoDB. Experience with <strong>GraphQL</strong> - utilized subscriptions for real-time data updates, conducted performance optimizations for handling large volumes of concurrent requests.</p>
+
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">🧪 Testing & Quality</h3>
+                    <p>Strong advocate for <strong>quality assurance</strong>: built comprehensive unit tests using JUnit with 80%+ coverage, designed and executed integration tests for API endpoints, implemented end-to-end testing with Protractor. Established <strong>monitoring and observability</strong> using AWS CloudWatch, Prometheus, ELK Stack, and Splunk for tracking performance, availability, and security. Implemented centralized logging and distributed tracing for microservices.</p>
+
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">🎯 Methodologies & Tools</h3>
+                    <p>Experienced in <strong>Agile/Scrum methodologies</strong> - participated in sprint planning, daily scrums, and retrospectives. Proficient with project management tools: JIRA for ticket tracking, bug management, and maintaining user stories; CA Agile Central (Rally) for agile workflows; VSTS for managing development cycles. Skilled in <strong>version control</strong> using Git and SVN, and familiar with design patterns including Singleton, Factory, DAO, Session Façade, and MVC for building maintainable, scalable applications.</p>
+
+                    <p style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid var(--border); font-style: italic;">Throughout my career, I've demonstrated strong leadership in mentoring teams, collaborating with business analysts to translate requirements into technical solutions, and maintaining production systems with focus on reliability, security, and performance optimization.</p>
+                </div>
+
+
+
+                <div class="career-timeline">
+                    <h3 style="margin-bottom: 2rem; text-align: center;">Career Highlights</h3>
+                    <div class="timeline-item">
+                        <h3>
+                            <img src="assets/images/geico-logo.png" alt="GEICO Logo" class="company-logo">
+                            <em>Staff Engineer</em> <span class="duration"></span>
+                        </h3>
+
+                        <p> I worked with GEICO’s <strong>Telecommunications Engineering team</strong>, responsible for designing and modernizing enterprise-grade IVR systems across multiple lines of business including BOAT, Claims (MOAT), and the GEICO Service Center. As a Staff Engineer, I led the end-to-end architecture and development of <strong>contact flows in AWS Connect</strong> and built a custom <strong>Cloud Contact Portal (CCP)</strong> for agents using <strong>React and Angular</strong>, deployed on <strong>Azure AKS</strong> for high availability and scalability. </p> <p> The AWS Connect platform leveraged <strong>Amazon Lex V2 bots</strong>, <strong>Lambda microservices</strong>, and <strong>API Gateway</strong> for real-time interaction routing and data retrieval from downstream systems. I developed several <strong>standalone Angular apps</strong> and <strong>Spring Boot microservices</strong> to support operational dashboards, queue management, and analytics. ETL pipelines were automated using <strong>AWS Glue</strong> for transforming call and session data stored in <strong>PostgreSQL and SQL Server via Hibernate</strong>. For observability, we relied on <strong>CloudWatch metrics, alarms, and structured logging</strong> across the microservice ecosystem. </p> <p> Recently, I integrated <strong>Agentic AI and LLM-powered assistants</strong> into the IVR platform to create self-learning conversational flows capable of reasoning and adapting in real time. These LLM agents—deployed via <strong>AWS Lambda</strong> and orchestrated through <strong>Amazon Connect and Bedrock</strong>—analyze caller intent, perform contextual lookups through Spring Boot services, and dynamically update the conversation path or agent recommendations. This hybrid architecture of <strong>Java microservices + AWS AI services</strong> has accelerated resolution rates, reduced manual transfers, and established GEICO’s contact center as a forward-looking model of intelligent customer engagement. </p>
+                        </div>
+                    <div class="timeline-item">
+                        <h3>
+                            <img src="assets/images/sec-logo.png" alt="SEC Logo" class="company-logo">
+                            <em>Sr. Full Stack Developer</em> <span class="duration"></span>
+                        </h3>
+
+                        <p>
+                            Worked on the <strong>EDGAR (Electronic Data Gathering, Analysis, and Retrieval)</strong> system for the
+                            <strong>U.S. Securities and Exchange Commission (SEC)</strong>, a large-scale platform that automates the
+                            submission, validation, indexing, and retrieval of corporate filings.
+                        </p>
+
+                        <p>
+                            Contributed as a <strong>Java Full Stack Developer</strong> designing and implementing
+                            <strong>Spring Cloud–based microservices</strong> with an <strong>Angular Material UI</strong>,
+                            deployed on <strong>AWS EKS</strong>. Developed a high-performance document search feature using
+                            <strong>Apache Lucene and Solr</strong>, enabling intelligent, full-text querying across millions of filings.
+                        </p>
+
+                        <p>
+                            Delivered <strong>monitoring and reporting dashboards</strong> through <strong>CloudWatch and Splunk</strong>,
+                            implemented <strong>Terraform (IaC)</strong> for infrastructure provisioning, and managed the development
+                            lifecycle using <strong>Git and Agile Scrum practices</strong>.
+                        </p>
+
+                        <p>
+                            Enhanced the application with <strong>intelligent document processing and contextual search capabilities</strong>
+                            to improve data discoverability and analytics. Designed metadata extraction services using
+                            <strong>Spring Boot and AWS Lambda</strong> to classify filings, tag key entities, and deliver
+                            enriched search results within the EDGAR workflow.
+                        </p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>
+                            <img src="assets/images/comcast-logo.png" alt="Comcast Logo" class="company-logo">
+                            <em>Full Stack Developer</em> <span class="duration"></span>
+                        </h3>
+
+                        <p>
+                            Worked on the <strong>KEB (Know Every Business)</strong> platform within Comcast Business — a marketing intelligence
+                            web application designed to empower Comcast field representatives to identify and connect with
+                            non-Comcast businesses, build tailored service packages, and expand commercial outreach.
+                        </p>
+
+                        <p>
+                            The project involved architecting and developing <strong>ETL pipelines</strong> using
+                            <strong>Pentaho, Talend, and AWS Glue</strong> to ingest, cleanse, and normalize large datasets from
+                            multiple third-party sources including CoStar and regional data providers. Leveraged various
+                            <strong>AWS services</strong> for data staging, transformation, and access through
+                            <strong>Lambda, DynamoDB, API Gateway, and CloudFront</strong> to deliver performant, real-time
+                            data services for the front-end applications.
+                        </p>
+
+                        <p>
+                            Implemented <strong>Spring Boot microservices</strong> integrated with <strong>Angular-based web interfaces</strong>,
+                            providing intuitive dashboards for marketing teams and field reps. Built <strong>infrastructure as code</strong>
+                            with <strong>Terraform</strong> and automated CI/CD deployment pipelines using <strong>AWS DevOps tools</strong>.
+                            Ensured high system reliability, security, and scalability across environments.
+                        </p>
+                        <p>
+                            As part of the core engineering team, I contributed to enhancing data accuracy, scalability, and
+                            user engagement through continuous optimization of ETL and API workflows.
+                            Designed <strong>data validation and deduplication frameworks</strong> to improve data quality across
+                            business datasets and implemented <strong>caching layers</strong> for faster lookups.
+                            Collaborated with marketing analysts to transform business requirements into technical solutions,
+                            enabling actionable insights and streamlined prospect targeting. This platform significantly improved
+                            sales efficiency and became a key decision-support system for Comcast’s commercial growth initiatives.
+                        </p>
+
+                    </div>
+                    <div class="timeline-item">
+                        <h3>
+                            <img src="assets/images/ndgroup-logo.png" alt="Norfolk & Dedham Group Logo" class="company-logo">
+                            <em>Software Engineer</em> <span class="duration"></span>
+                        </h3>
+
+                        <p>
+                            Contributed to the development of <strong>AgentPak®</strong> at <strong>Norfolk & Dedham Group</strong>,
+                            a web-based platform built to simplify the creation and management of <strong>Property & Casualty (P&C)</strong>
+                            insurance policies. The system enabled insurance agents and policyholders to create, update, and manage
+                            policies efficiently while integrating with <strong>MassPrinting’s document output solution</strong> for
+                            automated print and electronic policy distribution.
+                        </p>
+
+                        <p>
+                            Worked as a <strong>Full Stack Engineer</strong> designing and implementing <strong>Spring Boot–based
+                            microservices</strong> following <strong>Netflix OSS architecture</strong> patterns including
+                            <strong>Eureka, Ribbon, and Hystrix</strong> for service discovery, load balancing, and fault tolerance.
+                            Utilized <strong>Hibernate ORM</strong> for data persistence with <strong>Oracle Database</strong> as the backend.
+                        </p>
+
+                        <p>
+                            The user interface was initially built using <strong>Bootstrap and jQuery</strong> and later migrated to
+                            <strong>Angular</strong> to deliver a dynamic, component-driven experience for insurance agents.
+                            I also maintained legacy applications developed in <strong>Apache Struts</strong> and led the migration
+                            of core modules from Struts to Spring MVC, reducing technical debt and improving performance and maintainability.
+                        </p>
+
+                        <p>
+                            Collaborated with cross-functional teams to enhance data quality, compliance, and reporting capabilities.
+                            Implemented <strong>CI/CD pipelines</strong> using Jenkins and Git for source management, and
+                            <strong>Terraform</strong> for Infrastructure as Code (IaC). Designed auditing and reporting
+                            enhancements that improved policy visibility and accelerated agent onboarding and policy issuance cycles.
+                        </p>
+
+                        <p>
+                            The resulting platform delivered a more efficient, fault-tolerant, and scalable solution for mid-sized
+                            insurance carriers — combining robust backend architecture with intuitive front-end usability,
+                            empowering agents to provide faster, more accurate service to their customers.
+                        </p>
+
+                    </div>
+                    <div class="timeline-item">
+                        <h3>
+                            <img src="assets/images/state-street-logo.png" alt="State Street Logo" class="company-logo">
+                            <em>Sr. Full Stack Developer</em> <span class="duration"></span>
+                        </h3>
+
+                        <p>
+                            Worked on the <strong>LiveTrial</strong> application at <strong>State Street Corporation</strong>, a mission-critical
+                            hedge fund analytics platform designed to track <strong>fund performance, debt allocations, and investment positions</strong>
+                            across large-scale institutional portfolios. The system delivered high-precision financial reporting and
+                            performance attribution for global fund managers.
+                        </p>
+
+                        <p>
+                            Developed <strong>RESTful web services</strong> using <strong>Spring MVC</strong> and legacy <strong>Apache Struts</strong> frameworks
+                            to integrate with multiple backend systems and provide real-time access to fund data. The UI was built using
+                            <strong>Google Web Toolkit (GWT)</strong> to deliver dynamic, widget-based dashboards and interactive performance charts
+                            for portfolio managers and analysts.
+                        </p>
+
+                        <p>
+                            Engineered <strong>high-performance multithreaded Java components</strong> for complex fund and debt allocation calculations.
+                            Applied <strong>Java concurrency utilities</strong> to optimize computation-heavy workloads and reduce response latency
+                            under high data throughput conditions. Collaborated with the mainframe teams to synchronize data exchange
+                            between distributed systems and COBOL-based legacy processes.
+                        </p>
+
+                        <p>
+                            Designed and deployed applications following <strong>DevOps principles</strong> — automating build and deployment pipelines
+                            using Jenkins, Maven, and Shell scripting. Implemented robust monitoring and alerting using <strong>Splunk and AppDynamics</strong>
+                            to track application performance, throughput, and availability in production environments.
+                        </p>
+
+                        <p>
+                            Worked closely with quantitative analysts and product teams to validate performance algorithms and reporting logic,
+                            ensuring accurate tracking of fund benchmarks, performance ratios, and allocations. The LiveTrial platform became a
+                            cornerstone tool for hedge fund clients, enabling precise and transparent performance evaluation at scale.
+                        </p>
+
+                    </div>
+                    <div class="timeline-item">
+                        <h3>
+                            <img src="assets/images/ca-technologies-logo.png" alt="CA Technologies Logo" class="company-logo">
+                            <em>Java Developer</em> <span class="duration"></span>
+                        </h3>
+                        <p>
+                            Worked at <strong>CA Technologies</strong> on two flagship enterprise products —
+                            <strong>Arcserve</strong> and <strong>erwin Data Modeler</strong>.
+                            <strong>Arcserve</strong> is an enterprise-grade data protection and disaster recovery platform providing
+                            backup, replication, and high-availability solutions across hybrid infrastructures.
+                            <strong>erwin Data Modeler</strong> is a data architecture and governance tool enabling organizations to
+                            design, maintain, and deploy enterprise-scale data models across databases like Oracle and SQL Server.
+                        </p>
+
+                        <p>
+                            Contributed as a <strong>Full Stack Java Developer</strong> building and maintaining
+                            <strong>Spring Boot microservices</strong> and <strong>REST APIs</strong> for Arcserve’s
+                            scheduling, job orchestration, and backup-policy modules. Implemented data model automation and
+                            schema deployment components for <strong>erwin Data Modeler</strong>, integrating with Oracle
+                            and SQL Server backends for versioned model updates and metadata synchronization.
+                        </p>
+
+                        <p>
+                            Developed front-end modules using <strong>Bootstrap</strong> and later migrated to
+                            <strong>Angular</strong> for improved UI responsiveness and maintainability.
+                            Maintained legacy <strong>Apache Struts</strong> applications and led the migration of key
+                            modules to <strong>Spring MVC</strong>, reducing maintenance overhead and aligning with
+                            modern Spring Boot standards.
+                        </p>
+
+                        <p>
+                            Implemented <strong>DevOps pipelines</strong> with <strong>Jenkins</strong> and
+                            <strong>Git</strong> for version control, and used <strong>Terraform</strong> for
+                            Infrastructure as Code (IaC).
+                            These efforts improved deployment efficiency and reduced build times while enhancing
+                            product stability and integration across multiple data-protection and modeling tools.
+                        </p>
+                    </div>
+
+                    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border);">
+                        <h3 style="margin-bottom: 2rem; text-align: center;">🎓 Education</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+                            <!-- Master's -->
+                            <div style="background: var(--card-bg); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--accent); text-align: center;">
+                                <img src="assets/images/snhu-logo.png" alt="Southern New Hampshire University Logo" style="width: 160px; height: auto; margin-bottom: 1rem; border-radius: 6px; object-fit: contain;">
+                                <h4 style="margin-bottom: 0.5rem;">Master's Degree</h4>
+                                <p style="color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">Computer & Information Sciences</p>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">Southern New Hampshire University, NH</p>
+                            </div>
+
+                            <!-- Bachelor's -->
+                            <div style="background: var(--card-bg); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--accent); text-align: center;">
+                                <img src="assets/images/jntu-logo.png" alt="Jawaharlal Nehru Technological University Logo" style="width: 100px; height: auto; margin-bottom: 1rem; border-radius: 6px; object-fit: contain;">
+                                <h4 style="margin-bottom: 0.5rem;">Bachelor's Degree</h4>
+                                <p style="color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">Computer Science Engineering</p>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">Jawaharlal Nehru Technological University, India</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section - REPLACE FROM LINE 942 to 1013 -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tech Stack & Experience</h2>
+                <p>Click on any category to expand and explore my technical expertise</p>
+            </div>
+
+            <div class="tech-tree">
+                <!-- Backend Development -->
+                <div class="tech-category">
+                    <div class="tech-category-header" onclick="toggleCategory(this)">
+                        <span class="expand-icon">▶</span>
+                        <span class="category-icon">☕</span>
+                        <h3>Backend Development</h3>
+                        <span class="item-count">20+ technologies</span>
+                    </div>
+                    <div class="tech-category-content">
+                        <div class="tech-subcategory">
+                            <h4>Core Java</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Java 8/11/17</span>
+                                <span class="tech-badge">Collections</span>
+                                <span class="tech-badge">Multithreading</span>
+                                <span class="tech-badge">Data Structures</span>
+                                <span class="tech-badge">Exception Handling</span>
+                                <span class="tech-badge">Polymorphism</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Spring Ecosystem</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Spring Boot</span>
+                                <span class="tech-badge">Spring MVC</span>
+                                <span class="tech-badge">Spring AOP</span>
+                                <span class="tech-badge">Spring Cloud</span>
+                                <span class="tech-badge">Spring Security</span>
+                                <span class="tech-badge">Spring Integration</span>
+                                <span class="tech-badge">Spring Batch</span>
+                                <span class="tech-badge">Spring Web Services</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Frameworks & ORM</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Hibernate</span>
+                                <span class="tech-badge">JPA</span>
+                                <span class="tech-badge">JDBC</span>
+                                <span class="tech-badge">Struts</span>
+                                <span class="tech-badge">EJB</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Design Patterns</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">MVC</span>
+                                <span class="tech-badge">Singleton</span>
+                                <span class="tech-badge">Factory</span>
+                                <span class="tech-badge">DAO</span>
+                                <span class="tech-badge">Session Façade</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="tech-category">
+                    <div class="tech-category-header" onclick="toggleCategory(this)">
+                        <span class="expand-icon">▶</span>
+                        <span class="category-icon">☁️</span>
+                        <h3>Cloud & DevOps</h3>
+                        <span class="item-count">15+ technologies</span>
+                    </div>
+                    <div class="tech-category-content">
+                        <div class="tech-subcategory">
+                            <h4>AWS Services</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Lambda (Node.js)</span>
+                                <span class="tech-badge">EC2</span>
+                                <span class="tech-badge">S3</span>
+                                <span class="tech-badge">DynamoDB</span>
+                                <span class="tech-badge">CloudWatch</span>
+                                <span class="tech-badge">API Gateway</span>
+                                <span class="tech-badge">AWS Connect</span>
+                                <span class="tech-badge">Amazon Lex</span>
+                                <span class="tech-badge">Cognito</span>
+                                <span class="tech-badge">RDS</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Infrastructure as Code</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Terraform</span>
+                                <span class="tech-badge">CloudFormation</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Containerization & Orchestration</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">Kubernetes</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>CI/CD</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Jenkins</span>
+                                <span class="tech-badge">GitHub Actions</span>
+                                <span class="tech-badge">Maven</span>
+                                <span class="tech-badge">Ant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend Development -->
+                <div class="tech-category">
+                    <div class="tech-category-header" onclick="toggleCategory(this)">
+                        <span class="expand-icon">▶</span>
+                        <span class="category-icon">⚛️</span>
+                        <h3>Frontend Development</h3>
+                        <span class="item-count">15+ technologies</span>
+                    </div>
+                    <div class="tech-category-content">
+                        <div class="tech-subcategory">
+                            <h4>Modern Frameworks</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Angular</span>
+                                <span class="tech-badge">Angular Material</span>
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Redux</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Core Technologies</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">JavaScript (ES6+)</span>
+                                <span class="tech-badge">TypeScript</span>
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">jQuery</span>
+                                <span class="tech-badge">AJAX</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Additional Frameworks</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">GWT</span>
+                                <span class="tech-badge">Vaadin</span>
+                                <span class="tech-badge">EXT.js</span>
+                                <span class="tech-badge">JSP</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Testing</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Protractor</span>
+                                <span class="tech-badge">Karma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="tech-category">
+                    <div class="tech-category-header" onclick="toggleCategory(this)">
+                        <span class="expand-icon">▶</span>
+                        <span class="category-icon">🗄️</span>
+                        <h3>Databases & Data Management</h3>
+                        <span class="item-count">10+ technologies</span>
+                    </div>
+                    <div class="tech-category-content">
+                        <div class="tech-subcategory">
+                            <h4>Relational Databases</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Oracle</span>
+                                <span class="tech-badge">DB2</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">PostgreSQL</span>
+                                <span class="tech-badge">SQL Server</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>NoSQL Databases</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">MongoDB</span>
+                                <span class="tech-badge">DynamoDB</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Database Technologies</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">PL/SQL</span>
+                                <span class="tech-badge">Stored Procedures</span>
+                                <span class="tech-badge">Triggers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- APIs & Integration -->
+                <div class="tech-category">
+                    <div class="tech-category-header" onclick="toggleCategory(this)">
+                        <span class="expand-icon">▶</span>
+                        <span class="category-icon">🔌</span>
+                        <h3>APIs & Integration</h3>
+                        <span class="item-count">12+ technologies</span>
+                    </div>
+                    <div class="tech-category-content">
+                        <div class="tech-subcategory">
+                            <h4>RESTful Services</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">JAX-RS</span>
+                                <span class="tech-badge">Jersey</span>
+                                <span class="tech-badge">REST API Design</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>SOAP Services</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">JAX-WS</span>
+                                <span class="tech-badge">WSDL</span>
+                                <span class="tech-badge">UDDI</span>
+                                <span class="tech-badge">Apache Axis2</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Modern APIs</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">GraphQL</span>
+                                <span class="tech-badge">GraphQL Subscriptions</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Integration</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Spring Integration</span>
+                                <span class="tech-badge">Microservices Architecture</span>
+                                <span class="tech-badge">API Gateway</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Messaging & Events -->
+                <div class="tech-category">
+                    <div class="tech-category-header" onclick="toggleCategory(this)">
+                        <span class="expand-icon">▶</span>
+                        <span class="category-icon">📨</span>
+                        <h3>Messaging & Event Processing</h3>
+                        <span class="item-count">5+ technologies</span>
+                    </div>
+                    <div class="tech-category-content">
+                        <div class="tech-subcategory">
+                            <h4>Message Brokers</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">ActiveMQ</span>
+                                <span class="tech-badge">JMS</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Patterns & Architecture</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Event-Driven Architecture</span>
+                                <span class="tech-badge">Asynchronous Processing</span>
+                                <span class="tech-badge">Queues & Topics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search & Analytics -->
+                <div class="tech-category">
+                    <div class="tech-category-header" onclick="toggleCategory(this)">
+                        <span class="expand-icon">▶</span>
+                        <span class="category-icon">🔍</span>
+                        <h3>Search & Analytics</h3>
+                        <span class="item-count">8+ technologies</span>
+                    </div>
+                    <div class="tech-category-content">
+                        <div class="tech-subcategory">
+                            <h4>Search Engines</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Elasticsearch</span>
+                                <span class="tech-badge">Apache Lucene</span>
+                                <span class="tech-badge">SOLR</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>ETL & Data Processing</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Pentaho</span>
+                                <span class="tech-badge">Talend</span>
+                                <span class="tech-badge">ETL Jobs</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Analytics</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Data Analytics</span>
+                                <span class="tech-badge">Business Reports</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testing & Quality -->
+                <div class="tech-category">
+                    <div class="tech-category-header" onclick="toggleCategory(this)">
+                        <span class="expand-icon">▶</span>
+                        <span class="category-icon">🧪</span>
+                        <h3>Testing & Quality Assurance</h3>
+                        <span class="item-count">10+ technologies</span>
+                    </div>
+                    <div class="tech-category-content">
+                        <div class="tech-subcategory">
+                            <h4>Unit Testing</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">JUnit</span>
+                                <span class="tech-badge">Mockito</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Integration & E2E Testing</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Selenium</span>
+                                <span class="tech-badge">TestNG</span>
+                                <span class="tech-badge">REST Assured</span>
+                                <span class="tech-badge">Protractor</span>
+                                <span class="tech-badge">Karma</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>BDD & Automation</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Cucumber</span>
+                                <span class="tech-badge">Test Automation Frameworks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monitoring & Observability -->
+                <div class="tech-category">
+                    <div class="tech-category-header" onclick="toggleCategory(this)">
+                        <span class="expand-icon">▶</span>
+                        <span class="category-icon">📊</span>
+                        <h3>Monitoring & Observability</h3>
+                        <span class="item-count">7+ technologies</span>
+                    </div>
+                    <div class="tech-category-content">
+                        <div class="tech-subcategory">
+                            <h4>Monitoring Tools</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">AWS CloudWatch</span>
+                                <span class="tech-badge">Prometheus</span>
+                                <span class="tech-badge">Splunk</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Logging & Tracing</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">ELK Stack</span>
+                                <span class="tech-badge">Log4j</span>
+                                <span class="tech-badge">Centralized Logging</span>
+                                <span class="tech-badge">Distributed Tracing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security -->
+                <div class="tech-category">
+                    <div class="tech-category-header" onclick="toggleCategory(this)">
+                        <span class="expand-icon">▶</span>
+                        <span class="category-icon">🔐</span>
+                        <h3>Security & Authentication</h3>
+                        <span class="item-count">8+ technologies</span>
+                    </div>
+                    <div class="tech-category-content">
+                        <div class="tech-subcategory">
+                            <h4>Authentication & Authorization</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Spring Security</span>
+                                <span class="tech-badge">SSO</span>
+                                <span class="tech-badge">JWT</span>
+                                <span class="tech-badge">OAuth</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Security Tools</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">IBM WebSeal</span>
+                                <span class="tech-badge">CORS</span>
+                                <span class="tech-badge">Access Control</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Methodologies -->
+                <div class="tech-category">
+                    <div class="tech-category-header" onclick="toggleCategory(this)">
+                        <span class="expand-icon">▶</span>
+                        <span class="category-icon">🛠️</span>
+                        <h3>Tools & Methodologies</h3>
+                        <span class="item-count">15+ tools</span>
+                    </div>
+                    <div class="tech-category-content">
+                        <div class="tech-subcategory">
+                            <h4>Version Control</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Git</span>
+                                <span class="tech-badge">SVN</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Project Management</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">JIRA</span>
+                                <span class="tech-badge">CA Agile Central</span>
+                                <span class="tech-badge">VSTS</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>IDEs & Development Tools</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">IntelliJ IDEA</span>
+                                <span class="tech-badge">Eclipse</span>
+                                <span class="tech-badge">JRockit</span>
+                                <span class="tech-badge">XMLSPY</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Methodologies</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Agile/Scrum</span>
+                                <span class="tech-badge">Sprint Planning</span>
+                                <span class="tech-badge">Daily Standups</span>
+                                <span class="tech-badge">Retrospectives</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Application Servers -->
+                <div class="tech-category">
+                    <div class="tech-category-header" onclick="toggleCategory(this)">
+                        <span class="expand-icon">▶</span>
+                        <span class="category-icon">🖥️</span>
+                        <h3>Application Servers & Platforms</h3>
+                        <span class="item-count">6+ servers</span>
+                    </div>
+                    <div class="tech-category-content">
+                        <div class="tech-subcategory">
+                            <h4>Java Application Servers</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Apache Tomcat</span>
+                                <span class="tech-badge">WebLogic</span>
+                                <span class="tech-badge">WebSphere</span>
+                                <span class="tech-badge">JBoss</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Operating Systems</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">UNIX</span>
+                                <span class="tech-badge">Linux</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Technologies -->
+                <div class="tech-category">
+                    <div class="tech-category-header" onclick="toggleCategory(this)">
+                        <span class="expand-icon">▶</span>
+                        <span class="category-icon">🚀</span>
+                        <h3>Additional Technologies</h3>
+                        <span class="item-count">10+ technologies</span>
+                    </div>
+                    <div class="tech-category-content">
+                        <div class="tech-subcategory">
+                            <h4>Data Formats & Parsing</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">XML</span>
+                                <span class="tech-badge">XSL/XSLT</span>
+                                <span class="tech-badge">JSON</span>
+                                <span class="tech-badge">JAXB</span>
+                                <span class="tech-badge">DOM/SAX</span>
+                                <span class="tech-badge">XSD</span>
+                                <span class="tech-badge">XPATH</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>Runtime & Performance</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">Executor Framework</span>
+                                <span class="tech-badge">Rate Limiting</span>
+                                <span class="tech-badge">Throttling</span>
+                            </div>
+                        </div>
+                        <div class="tech-subcategory">
+                            <h4>CMS & Documents</h4>
+                            <div class="tech-tags">
+                                <span class="tech-badge">WordPress</span>
+                                <span class="tech-badge">Adobe Lifecycle</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <!-- Portfolio Section - REPLACE from line with "Portfolio & Projects" -->
+    <!-- Portfolio Section - REPLACE from line with "Portfolio & Projects" -->
+        <!-- Portfolio Section - REPLACE from line with "Portfolio & Projects" -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Portfolio & Projects</h2>
+                <p>Real-world enterprise solutions delivered at GEICO and beyond</p>
+            </div>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="aws-connect">AWS Connect</button>
+                <button class="filter-btn" data-filter="aws">AWS Cloud</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: AWS Connect Contact Center -->
+                <div class="project-card" data-category="aws-connect aws fullstack" data-project-id="aws-connect">
+                    <div class="project-image">📞</div>
+                    <div class="project-content">
+                        <h3>AWS Connect Contact Center Platform</h3>
+                        <p>Designed and deployed enterprise-scale contact center solution integrating AWS Connect with Amazon Lex for intelligent IVR workflows. Implemented call recording, contact flow routing, and agent queues with dynamic configuration through parameterized Lambda functions.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">✅ Real-time customer support automation</div>
+                            <div class="highlight-item">✅ Automated user provisioning & queue assignment</div>
+                            <div class="highlight-item">✅ Centralized logging via CloudWatch</div>
+                            <div class="highlight-item">✅ 40% reduction in manual configuration</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS Connect</span>
+                            <span class="tech-tag">Amazon Lex</span>
+                            <span class="tech-tag">Lambda (Node.js)</span>
+                            <span class="tech-tag">DynamoDB</span>
+                            <span class="tech-tag">S3</span>
+                            <span class="tech-tag">CloudWatch</span>
+                            <span class="tech-tag">IVR Workflows</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Agentic AI & Lex Bots -->
+                <div class="project-card" data-category="aws-connect aws backend" data-project-id="lex-bot">
+                    <div class="project-image">🤖</div>
+                    <div class="project-content">
+                        <h3>Intelligent Lex Bot & Agentic AI Integration</h3>
+                        <p>Developed custom AWS Lambda functions in Node.js to enhance AWS Connect with intelligent conversational AI. Built Lex bots for automated call routing and customer intent recognition, implementing agentic AI patterns for real-time decision making.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">✅ Automated IVR interactions with NLU</div>
+                            <div class="highlight-item">✅ Real-time analytics integration</div>
+                            <div class="highlight-item">✅ 60% improvement in call routing efficiency</div>
+                            <div class="highlight-item">✅ GraphQL subscriptions for live updates</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Amazon Lex</span>
+                            <span class="tech-tag">AWS Lambda</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Agentic AI</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">DynamoDB</span>
+                            <span class="tech-tag">CloudWatch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Monolith to Microservices Migration -->
+                <div class="project-card" data-category="fullstack backend aws" data-project-id="microservices">
+                    <div class="project-image">🏗️</div>
+                    <div class="project-content">
+                        <h3>Enterprise Monolith to Microservices Migration</h3>
+                        <p>Led the migration of legacy monolithic applications to cloud-native microservices architecture. Orchestrated deployment using Docker containers and Kubernetes clusters, implementing Spring Boot microservices with RESTful APIs hosted on AWS.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">✅ Decomposed monolith into 15+ microservices</div>
+                            <div class="highlight-item">✅ 99.9% uptime with auto-scaling</div>
+                            <div class="highlight-item">✅ 70% faster deployment cycles</div>
+                            <div class="highlight-item">✅ Reduced infrastructure costs by 35%</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">AWS ECS</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Jenkins CI/CD</span>
+                            <span class="tech-tag">Hibernate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Full Stack Angular Dashboard -->
+                <div class="project-card" data-category="fullstack aws" data-project-id="angular-dashboard">
+                    <div class="project-image">📊</div>
+                    <div class="project-content">
+                        <h3>Real-Time Business Analytics Dashboard</h3>
+                        <p>Built enterprise Single Page Application using Angular and Angular Material for exposing business transactional data through custom dashboards. Integrated with Spring Boot microservices and implemented real-time updates using GraphQL subscriptions.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">✅ Real-time data visualization with GraphQL</div>
+                            <div class="highlight-item">✅ Responsive design with Angular Material</div>
+                            <div class="highlight-item">✅ 50K+ daily active users</div>
+                            <div class="highlight-item">✅ 80% test coverage with Protractor/Karma</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Angular Material</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">DynamoDB</span>
+                            <span class="tech-tag">Protractor</span>
+                            <span class="tech-tag">Karma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Serverless API Gateway -->
+                <div class="project-card" data-category="backend aws" data-project-id="serverless-api">
+                    <div class="project-image">⚡</div>
+                    <div class="project-content">
+                        <h3>Serverless API Platform with Lambda & DynamoDB</h3>
+                        <p>Architected serverless API layer using AWS Lambda functions (Node.js) for CRUD operations on DynamoDB. Implemented API Gateway for rate limiting, throttling, and security policies, processing 100K+ requests daily.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">✅ 100% serverless architecture</div>
+                            <div class="highlight-item">✅ Sub-100ms response times</div>
+                            <div class="highlight-item">✅ Cost reduction of 60%</div>
+                            <div class="highlight-item">✅ Auto-scaling to handle traffic spikes</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS Lambda</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">DynamoDB</span>
+                            <span class="tech-tag">API Gateway</span>
+                            <span class="tech-tag">CloudWatch</span>
+                            <span class="tech-tag">S3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Infrastructure as Code -->
+                <div class="project-card" data-category="aws backend" data-project-id="terraform">
+                    <div class="project-image">🏛️</div>
+                    <div class="project-content">
+                        <h3>Terraform Infrastructure Automation</h3>
+                        <p>Developed reusable Terraform modules and scripts to automate AWS resource provisioning for contact center environment. Implemented infrastructure as code for AWS Connect instances, Lambda functions, and networking configurations.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">✅ Automated deployment across 5+ environments</div>
+                            <div class="highlight-item">✅ 90% reduction in provisioning time</div>
+                            <div class="highlight-item">✅ Consistent infrastructure configuration</div>
+                            <div class="highlight-item">✅ Version-controlled IaC workflows</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">CloudFormation</span>
+                            <span class="tech-tag">VSTS</span>
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">Jenkins</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: ETL & Data Analytics -->
+                <div class="project-card" data-category="backend aws" data-project-id="etl-pipeline">
+                    <div class="project-image">📈</div>
+                    <div class="project-content">
+                        <h3>ETL Pipeline & Business Intelligence Platform</h3>
+                        <p>Created ETL jobs using Pentaho and Talend for business analysis reports. Processed millions of records daily from multiple data sources, transforming and loading into data warehouses for real-time analytics.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">✅ Processing 5M+ records daily</div>
+                            <div class="highlight-item">✅ Real-time data transformation</div>
+                            <div class="highlight-item">✅ Automated reporting workflows</div>
+                            <div class="highlight-item">✅ 85% reduction in manual data processing</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Pentaho</span>
+                            <span class="tech-tag">Talend</span>
+                            <span class="tech-tag">DynamoDB</span>
+                            <span class="tech-tag">S3</span>
+                            <span class="tech-tag">Lambda</span>
+                            <span class="tech-tag">CloudWatch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: React Customer Portal -->
+                <div class="project-card" data-category="fullstack aws" data-project-id="react-portal">
+                    <div class="project-image">🌐</div>
+                    <div class="project-content">
+                        <h3>Customer Self-Service Portal (React)</h3>
+                        <p>Built modern customer-facing web application using React with Redux for state management. Integrated with Spring Boot microservices backend, implementing real-time features using GraphQL and WebSocket connections.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">✅ 200K+ monthly active users</div>
+                            <div class="highlight-item">✅ 95+ Lighthouse performance score</div>
+                            <div class="highlight-item">✅ Real-time notifications via WebSocket</div>
+                            <div class="highlight-item">✅ Responsive mobile-first design</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Jest</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9: Monitoring & Observability -->
+                <div class="project-card" data-category="backend aws" data-project-id="monitoring">
+                    <div class="project-image">🔍</div>
+                    <div class="project-content">
+                        <h3>Enterprise Monitoring & Observability Platform</h3>
+                        <p>Implemented comprehensive monitoring and logging solutions using AWS CloudWatch, Prometheus, and ELK Stack. Established centralized logging and distributed tracing for microservices, ensuring 99.9% system availability.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">✅ 99.9% system uptime achieved</div>
+                            <div class="highlight-item">✅ Real-time alerting & notifications</div>
+                            <div class="highlight-item">✅ Performance tracking for 50+ services</div>
+                            <div class="highlight-item">✅ MTTR reduced by 75%</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">CloudWatch</span>
+                            <span class="tech-tag">Prometheus</span>
+                            <span class="tech-tag">ELK Stack</span>
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10: Kubernetes Orchestration -->
+                <div class="project-card" data-category="backend aws" data-project-id="kubernetes">
+                    <div class="project-image">☸️</div>
+                    <div class="project-content">
+                        <h3>Kubernetes Microservices Orchestration</h3>
+                        <p>Implemented Kubernetes clusters to orchestrate containerized microservices, enabling efficient resource utilization and high availability. Configured deployments, services, ingress controllers, and auto-scaling policies.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">✅ Managing 30+ microservices</div>
+                            <div class="highlight-item">✅ Auto-scaling based on load</div>
+                            <div class="highlight-item">✅ Zero-downtime deployments</div>
+                            <div class="highlight-item">✅ 50% improved resource utilization</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Helm</span>
+                            <span class="tech-tag">Ingress</span>
+                            <span class="tech-tag">AWS EKS</span>
+                            <span class="tech-tag">Terraform</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications & Achievements</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">☁️</div>
+                    <h3>AWS Certified Solutions Architect</h3>
+                    <p class="cert-issuer">Amazon Web Services</p>
+                    <p class="cert-date">Associate Level • 2023</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">🔧</div>
+                    <h3>HashiCorp Terraform Certified</h3>
+                    <p class="cert-issuer">HashiCorp</p>
+                    <p class="cert-date">Associate Developer • 2023</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">☕</div>
+                    <h3>Oracle Certified Java Professional</h3>
+                    <p class="cert-issuer">Oracle Corporation</p>
+                    <p class="cert-date">Java SE 11 Developer • 2022</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: center; padding: 2rem; background: var(--card-bg); border-radius: 10px;">
+                <h3 style="margin-bottom: 1rem;">Additional Achievements</h3>
+                <p style="color: var(--text-secondary);">🏆 Employee Excellence Award for Cloud Migration Initiative (2023)<br>
+                🌟 Mentored 15+ junior developers in full-stack development<br>
+                📚 Active contributor to open-source Java and React projects</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <div class="container">
+            <h2 class="section-title">Latest Blog Posts</h2>
+            <div class="blog-grid">
+                <div class="blog-card" onclick="openBlogModal('blog1')">
+                    <div class="blog-thumbnail">📝</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>📅 Oct 15, 2024</span>
+                            <span>⏱️ 8 min read</span>
+                        </div>
+                        <h3>Why I Love Building Microservices with Spring Boot and AWS Lambda</h3>
+                        <p>Exploring the synergy between Spring Boot microservices and serverless AWS Lambda functions for building scalable, cost-effective cloud applications.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Spring Boot</span>
+                            <span class="blog-tag">AWS Lambda</span>
+                            <span class="blog-tag">Microservices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-card" onclick="openBlogModal('blog2')">
+                    <div class="blog-thumbnail">🚀</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>📅 Sep 28, 2024</span>
+                            <span>⏱️ 10 min read</span>
+                        </div>
+                        <h3>From Monolith to Microservices: My AWS Migration Journey</h3>
+                        <p>A comprehensive guide on migrating legacy monolithic applications to cloud-native microservices architecture on AWS, with real-world challenges and solutions.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">AWS</span>
+                            <span class="blog-tag">Cloud Migration</span>
+                            <span class="blog-tag">Architecture</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-card" onclick="openBlogModal('blog3')">
+                    <div class="blog-thumbnail">⚙️</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>📅 Sep 10, 2024</span>
+                            <span>⏱️ 7 min read</span>
+                        </div>
+                        <h3>Automating Cloud Infrastructure with Terraform and Jenkins</h3>
+                        <p>Best practices for implementing Infrastructure as Code using Terraform, integrated with Jenkins CI/CD pipelines for automated deployments and rollbacks.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Terraform</span>
+                            <span class="blog-tag">Jenkins</span>
+                            <span class="blog-tag">DevOps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-card" onclick="openBlogModal('blog4')">
+                    <div class="blog-thumbnail">💡</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>📅 Aug 22, 2024</span>
+                            <span>⏱️ 12 min read</span>
+                        </div>
+                        <h3>Full Stack Development Best Practices for Enterprise Apps</h3>
+                        <p>Essential patterns and practices for building maintainable, scalable enterprise applications using Java Spring Boot backends and React frontends.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Full Stack</span>
+                            <span class="blog-tag">React</span>
+                            <span class="blog-tag">Best Practices</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+
+                <div class="social-links">
+                    <a href="https://github.com" class="social-icon" title="GitHub" target="_blank">
+                        <span>💻</span>
+                    </a>
+                    <a href="https://linkedin.com" class="social-icon" title="LinkedIn" target="_blank">
+                        <span>💼</span>
+                    </a>
+                    <a href="mailto:venkat@example.com" class="social-icon" title="Email">
+                        <span>📧</span>
+                    </a>
+                </div>
+
+                <p class="contact-note">
+                    "Let's build something awesome together — I'm always open to discuss innovative projects and collaborations."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Venkat Chada. All rights reserved.</p>
+                <p style="margin-top: 0.5rem;">Built with ❤️ using HTML, CSS, and JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" onclick="scrollToTop()">↑</button>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('projectModal')">×</button>
+            <div id="projectModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Blog Modal -->
+    <div class="modal" id="blogModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('blogModal')">×</button>
+            <div id="blogModalContent"></div>
+        </div>
+    </div>
+
+
+
+    <!-- External JavaScript -->
+    <script src="./assets/js/main.js"></script>
+<script>
+    function toggleCategory(header) {
+        header.classList.toggle('active');
+        const content = header.nextElementSibling;
+        if (!content) return;
+
+        if (header.classList.contains('active')) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+            content.style.maxHeight = '0';
+        }
+    }
+</script>
+
+<script>
+// Portfolio Filter Functionality - ADD TO YOUR assets/js/main.js
+
+// Portfolio filtering
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    console.log('Portfolio filter initialized');
+    console.log('Found ' + filterBtns.length + ' filter buttons');
+    console.log('Found ' + projectCards.length + ' project cards');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+            console.log('Filter clicked:', filter);
+            
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Filter projects
+            projectCards.forEach(card => {
+                const categories = card.getAttribute('data-category');
+                
+                if (filter === 'all') {
+                    card.style.display = 'block';
+                    // Add fade-in animation
+                    card.style.animation = 'fadeIn 0.5s ease';
+                } else {
+                    if (categories.includes(filter)) {
+                        card.style.display = 'block';
+                        card.style.animation = 'fadeIn 0.5s ease';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+});
+
+// Add fade-in animation to CSS (if not already present)
+// You can add this in your <style> section:
+/*
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+*/
+
+
+
+// Project Modal Functionality - ADD THIS TO YOUR JAVASCRIPT
+
+// Project data for modals
+const projectData = {
+    'aws-connect': {
+        icon: '📞',
+        title: 'AWS Connect Contact Center Platform',
+        category: 'aws-connect aws fullstack',
+        description: 'Designed and deployed enterprise-scale contact center solution integrating AWS Connect with Amazon Lex for intelligent IVR workflows. Implemented call recording, contact flow routing, and agent queues with dynamic configuration through parameterized Lambda functions. Automated user provisioning and queue assignment using Amazon Connect API, improving onboarding efficiency.',
+        highlights: [
+            'Real-time customer support automation with intelligent routing',
+            'Automated user provisioning & queue assignment reducing manual work by 40%',
+            'Centralized logging via CloudWatch for complete observability',
+            'Parameterized Lambda functions for dynamic call flow configuration'
+        ],
+        tech: ['AWS Connect', 'Amazon Lex', 'Lambda (Node.js)', 'DynamoDB', 'S3', 'CloudWatch', 'IVR Workflows', 'API Gateway']
+    },
+    'lex-bot': {
+        icon: '🤖',
+        title: 'Intelligent Lex Bot & Agentic AI Integration',
+        category: 'aws-connect aws backend',
+        description: 'Developed custom AWS Lambda functions in Node.js to enhance AWS Connect with intelligent conversational AI. Built Lex bots for automated call routing and customer intent recognition, implementing agentic AI patterns for real-time decision making. Utilized GraphQL subscriptions for real-time data updates and notifications.',
+        highlights: [
+            'Automated IVR interactions with Natural Language Understanding',
+            'Real-time analytics integration for intelligent decision making',
+            '60% improvement in call routing efficiency through AI-powered intent recognition',
+            'GraphQL subscriptions for live updates and seamless user experience'
+        ],
+        tech: ['Amazon Lex', 'AWS Lambda', 'Node.js', 'Agentic AI', 'GraphQL', 'DynamoDB', 'CloudWatch', 'NLU']
+    },
+    'microservices': {
+        icon: '🏗️',
+        title: 'Enterprise Monolith to Microservices Migration',
+        category: 'fullstack backend aws',
+        description: 'Led the migration of legacy monolithic applications to cloud-native microservices architecture. Orchestrated deployment using Docker containers and Kubernetes clusters, implementing Spring Boot microservices with RESTful APIs hosted on AWS. Established comprehensive CI/CD pipelines and automated testing frameworks.',
+        highlights: [
+            'Decomposed monolith into 15+ independent microservices',
+            '99.9% uptime achieved with auto-scaling and high availability',
+            '70% faster deployment cycles with automated CI/CD pipelines',
+            'Reduced infrastructure costs by 35% through efficient resource utilization'
+        ],
+        tech: ['Spring Boot', 'Kubernetes', 'Docker', 'AWS ECS', 'Terraform', 'Jenkins CI/CD', 'Hibernate', 'RESTful APIs']
+    },
+    'angular-dashboard': {
+        icon: '📊',
+        title: 'Real-Time Business Analytics Dashboard',
+        category: 'fullstack aws',
+        description: 'Built enterprise Single Page Application using Angular and Angular Material for exposing business transactional data through custom dashboards. Integrated with Spring Boot microservices and implemented real-time updates using GraphQL subscriptions. Created automation scripts using Protractor and Karma for comprehensive testing coverage.',
+        highlights: [
+            'Real-time data visualization with GraphQL subscriptions and WebSocket connections',
+            'Responsive design with Angular Material components for seamless UX',
+            '50K+ daily active users accessing critical business metrics',
+            '80% test coverage achieved with Protractor and Karma automation'
+        ],
+        tech: ['Angular', 'Angular Material', 'GraphQL', 'Spring Boot', 'DynamoDB', 'Protractor', 'Karma', 'WebSocket']
+    },
+    'serverless-api': {
+        icon: '⚡',
+        title: 'Serverless API Platform with Lambda & DynamoDB',
+        category: 'backend aws',
+        description: 'Architected serverless API layer using AWS Lambda functions (Node.js) for CRUD operations on DynamoDB. Implemented API Gateway for rate limiting, throttling, and security policies. Built highly scalable solution processing over 100K+ requests daily with sub-100ms response times.',
+        highlights: [
+            '100% serverless architecture eliminating server management overhead',
+            'Sub-100ms response times with Lambda optimization techniques',
+            'Cost reduction of 60% compared to traditional EC2-based infrastructure',
+            'Auto-scaling to handle traffic spikes seamlessly'
+        ],
+        tech: ['AWS Lambda', 'Node.js', 'DynamoDB', 'API Gateway', 'CloudWatch', 'S3', 'Rate Limiting']
+    },
+    'terraform': {
+        icon: '🏛️',
+        title: 'Terraform Infrastructure Automation',
+        category: 'aws backend',
+        description: 'Developed reusable Terraform modules and scripts to automate AWS resource provisioning for contact center environment. Implemented infrastructure as code for AWS Connect instances, Lambda functions, and networking configurations. Established version-controlled IaC workflows with automated deployment pipelines.',
+        highlights: [
+            'Automated deployment across 5+ environments (Dev, QA, Staging, Prod)',
+            '90% reduction in infrastructure provisioning time',
+            'Consistent infrastructure configuration eliminating manual errors',
+            'Version-controlled IaC workflows enabling rollback and audit trails'
+        ],
+        tech: ['Terraform', 'AWS', 'CloudFormation', 'VSTS', 'Git', 'Jenkins', 'Infrastructure as Code']
+    },
+    'etl-pipeline': {
+        icon: '📈',
+        title: 'ETL Pipeline & Business Intelligence Platform',
+        category: 'backend aws',
+        description: 'Created ETL jobs using Pentaho and Talend for business analysis reports. Processed millions of records daily from multiple data sources, transforming and loading into data warehouses for real-time analytics. Implemented automated workflows for data validation and quality checks.',
+        highlights: [
+            'Processing 5M+ records daily from diverse data sources',
+            'Real-time data transformation with complex business logic',
+            'Automated reporting workflows reducing manual effort by 85%',
+            'Data quality checks ensuring 99.5% accuracy in reports'
+        ],
+        tech: ['Pentaho', 'Talend', 'DynamoDB', 'S3', 'Lambda', 'CloudWatch', 'ETL', 'Data Warehousing']
+    },
+    'react-portal': {
+        icon: '🌐',
+        title: 'Customer Self-Service Portal (React)',
+        category: 'fullstack aws',
+        description: 'Built modern customer-facing web application using React with Redux for state management. Integrated with Spring Boot microservices backend, implementing real-time features using GraphQL and WebSocket connections. Achieved 95+ Lighthouse performance score with optimized bundle sizes and lazy loading.',
+        highlights: [
+            '200K+ monthly active users with high engagement rates',
+            '95+ Lighthouse performance score through optimization techniques',
+            'Real-time notifications via WebSocket for instant updates',
+            'Responsive mobile-first design with PWA capabilities'
+        ],
+        tech: ['React', 'Redux', 'Spring Boot', 'GraphQL', 'AWS', 'Docker', 'Jest', 'WebSocket', 'PWA']
+    },
+    'monitoring': {
+        icon: '🔍',
+        title: 'Enterprise Monitoring & Observability Platform',
+        category: 'backend aws',
+        description: 'Implemented comprehensive monitoring and logging solutions using AWS CloudWatch, Prometheus, and ELK Stack. Established centralized logging and distributed tracing for microservices, ensuring 99.9% system availability. Built custom dashboards for real-time performance tracking and alerting.',
+        highlights: [
+            '99.9% system uptime achieved through proactive monitoring',
+            'Real-time alerting & notifications for critical incidents',
+            'Performance tracking for 50+ microservices with detailed metrics',
+            'Mean Time To Recovery (MTTR) reduced by 75% with better visibility'
+        ],
+        tech: ['CloudWatch', 'Prometheus', 'ELK Stack', 'Grafana', 'Kubernetes', 'Docker', 'Distributed Tracing']
+    },
+    'kubernetes': {
+        icon: '☸️',
+        title: 'Kubernetes Microservices Orchestration',
+        category: 'backend aws',
+        description: 'Implemented Kubernetes clusters to orchestrate containerized microservices, enabling efficient resource utilization and high availability. Configured deployments, services, ingress controllers, and auto-scaling policies. Managed 30+ microservices with zero-downtime deployment strategies.',
+        highlights: [
+            'Managing 30+ microservices with centralized orchestration',
+            'Auto-scaling based on load with Horizontal Pod Autoscaler',
+            'Zero-downtime deployments using rolling updates and blue-green strategies',
+            '50% improved resource utilization through efficient pod scheduling'
+        ],
+        tech: ['Kubernetes', 'Docker', 'Helm', 'Ingress', 'AWS EKS', 'Terraform', 'HPA', 'Service Mesh']
+    }
+};
+
+// Open modal function
+function openProjectModal(projectId) {
+    const project = projectData[projectId];
+    if (!project) return;
+    
+    const modal = document.getElementById('project-modal');
+    const overlay = document.getElementById('modal-overlay');
+    
+    // Set modal content
+    document.getElementById('modal-icon').textContent = project.icon;
+    document.getElementById('modal-title').textContent = project.title;
+    document.getElementById('modal-description').textContent = project.description;
+    
+    // Set highlights
+    const highlightsContainer = document.getElementById('modal-highlights');
+    highlightsContainer.innerHTML = project.highlights
+        .map(highlight => `<div class="modal-highlight-item">${highlight}</div>`)
+        .join('');
+    
+    // Set tech tags
+    const techContainer = document.getElementById('modal-tech-tags');
+    techContainer.innerHTML = project.tech
+        .map(tech => `<span class="modal-tech-tag">${tech}</span>`)
+        .join('');
+    
+    // Show modal
+    overlay.classList.add('active');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Close modal function
+function closeModal() {
+    const modal = document.getElementById('project-modal');
+    const overlay = document.getElementById('modal-overlay');
+    
+    overlay.classList.remove('active');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Initialize modal event listeners
+document.addEventListener('DOMContentLoaded', function() {
+    // Close modal on overlay click
+    const overlay = document.getElementById('modal-overlay');
+    if (overlay) {
+        overlay.addEventListener('click', closeModal);
+    }
+    
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+    
+    // Add click handlers to project cards
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const projectId = this.getAttribute('data-project-id');
+            if (projectId) {
+                openProjectModal(projectId);
+            }
+        });
+    });
+});
+
+</script>
+
+
+<!-- Modal HTML - ADD THIS BEFORE THE CLOSING </body> TAG -->
+
+<!-- Modal Overlay -->
+<div id="modal-overlay" class="modal-overlay"></div>
+
+<!-- Project Modal -->
+<div id="project-modal" class="modal">
+    <div class="modal-header">
+        <div id="modal-icon" class="modal-icon"></div>
+        <h2 id="modal-title"></h2>
+        <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+        <p id="modal-description" class="modal-description"></p>
+        
+        <div class="modal-highlights">
+            <h3>🎯 Key Achievements</h3>
+            <div id="modal-highlights"></div>
+        </div>
+        
+        <div class="modal-tech">
+            <h3>💻 Technologies Used</h3>
+            <div id="modal-tech-tags" class="modal-tech-grid"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

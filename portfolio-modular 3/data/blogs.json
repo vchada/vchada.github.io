@@ -1,0 +1,38 @@
+{
+  "blog1": {
+    "id": "blog1",
+    "title": "Why I Love Building Microservices with Spring Boot and AWS Lambda",
+    "date": "October 15, 2024",
+    "readTime": "8 min read",
+    "excerpt": "Microservices architecture has revolutionized how we build and deploy applications, and combining Spring Boot with AWS Lambda creates a powerful synergy.",
+    "file": "microservices-spring-boot-lambda.md",
+    "icon": "📱"
+  },
+  "blog2": {
+    "id": "blog2",
+    "title": "From Monolith to Microservices: My AWS Migration Journey",
+    "date": "September 28, 2024",
+    "readTime": "10 min read",
+    "excerpt": "Migrating a legacy monolithic application to microservices on AWS is challenging but incredibly rewarding. Here's what I learned.",
+    "file": "monolith-to-microservices-migration.md",
+    "icon": "🚀"
+  },
+  "blog3": {
+    "id": "blog3",
+    "title": "Automating Cloud Infrastructure with Terraform and Jenkins",
+    "date": "September 10, 2024",
+    "readTime": "7 min read",
+    "excerpt": "Infrastructure as Code (IaC) has transformed how we manage cloud resources. Here's my approach to implementing automated deployments.",
+    "file": "terraform-jenkins-automation.md",
+    "icon": "⚙️"
+  },
+  "blog4": {
+    "id": "blog4",
+    "title": "Full Stack Development Best Practices for Enterprise Apps",
+    "date": "August 22, 2024",
+    "readTime": "12 min read",
+    "excerpt": "Building enterprise applications requires balancing functionality, maintainability, and performance. Best practices from 13 years of development.",
+    "file": "fullstack-enterprise-best-practices.md",
+    "icon": "💻"
+  }
+}
