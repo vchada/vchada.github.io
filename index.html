@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Venkat Chada - Java Full Stack Engineer with 13 years of experience in enterprise software development, cloud architecture, AWS, Spring Boot, React, and DevOps">
-    <meta name="keywords" content="Java Full Stack Engineer, Spring Boot, AWS, React, Microservices, DevOps, Terraform, Cloud Architecture">
-    <meta property="og:title" content="Venkat Chada - Java Full Stack Engineer">
-    <meta property="og:description" content="13 years of experience building scalable cloud-native applications">
+    <meta name="description" content="Venkat Chada - Staff Engineer specializing in Java, Spring Boot, AWS, microservices, contact-center platforms, and practical Agentic AI systems.">
+    <meta name="keywords" content="Staff Engineer, Agentic AI Engineer, Java Full Stack Engineer, Spring Boot, AWS, React, Angular, Microservices, DevOps, Terraform">
+    <meta property="og:title" content="Venkat Chada - Staff Engineer | Java, AWS & Agentic AI">
+    <meta property="og:description" content="Senior engineering portfolio focused on enterprise Java, AWS modernization, microservices, and AI-enabled platforms.">
     <meta property="og:type" content="website">
-    <title>Venkat Chada - Java Full Stack Engineer Portfolio</title>
+    <title>Venkat Chada - Staff Engineer | Java, AWS & Agentic AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -45,7 +48,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: var(--primary-bg);
             color: var(--text-primary);
             line-height: 1.6;
@@ -589,6 +592,188 @@
             border-radius: 15px;
             font-size: 0.8rem;
             color: var(--text-secondary);
+        }
+
+        .project-mark,
+        .blog-mark {
+            width: 58px;
+            height: 58px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.15);
+            display: grid;
+            place-items: center;
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 0;
+        }
+
+        .cert-card {
+            display: grid;
+            grid-template-columns: 112px 1fr;
+            align-items: center;
+            gap: 1.25rem;
+            text-align: left;
+        }
+
+        .cert-badge {
+            width: 104px;
+            height: 104px;
+            object-fit: contain;
+            border-radius: 10px;
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 0.45rem;
+        }
+
+        .cert-embed {
+            width: 104px;
+            height: 104px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .cert-link {
+            display: inline-flex;
+            margin-top: 0.7rem;
+            color: var(--accent);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+.cert-link:hover {
+    text-decoration: underline;
+}
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: rgba(52, 152, 219, 0.08);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero-text h1,
+.section-title,
+.project-content h3,
+.timeline-item h3,
+.cert-card h3,
+.blog-content h3 {
+    font-family: 'IBM Plex Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: 0;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.6rem, 6vw, 4.8rem);
+    line-height: 1;
+    color: var(--text-primary);
+    background: none;
+    -webkit-text-fill-color: currentColor;
+}
+
+.hero-text .tagline {
+    max-width: 720px;
+    color: var(--text-primary);
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.hero-text p {
+    max-width: 760px;
+    font-size: 1.02rem;
+}
+
+.hero-capabilities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin: 1.25rem 0 1.6rem;
+}
+
+.hero-capabilities span {
+    padding: 0.5rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.hero-proof {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.8rem;
+    margin: 1.4rem 0 1.7rem;
+    max-width: 720px;
+}
+
+.hero-proof div {
+    padding: 0.95rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card-bg);
+}
+
+.hero-proof strong {
+    display: block;
+    color: var(--text-primary);
+    font-size: 1.15rem;
+    margin-bottom: 0.15rem;
+}
+
+.hero-proof span {
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+}
+
+@media (max-width: 768px) {
+    .hero-proof {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-capabilities {
+        justify-content: center;
+    }
+}
+
+        .achievement-panel {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+
+        .achievement-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .achievement-item {
+            padding: 1rem;
+            background: var(--secondary-bg);
+            border-radius: 8px;
+            color: var(--text-secondary);
+        }
+
+        .achievement-item strong {
+            display: block;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
         }
 
         /* Contact Section */
@@ -1347,7 +1532,7 @@
 }
 
 .modal-highlight-item::before {
-    content: '✅';
+    content: '•';
     font-size: 1.2rem;
     flex-shrink: 0;
 }
@@ -1441,6 +1626,7 @@
 
 </style>
 </head>
+<body>
 
     <!-- Navigation -->
     <nav>
@@ -1454,7 +1640,7 @@
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><button class="theme-toggle" onclick="toggleTheme()">🌓 Theme</button></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">Theme</button></li>
             </ul>
             <div class="mobile-menu" onclick="toggleMobileMenu()">
                 <span></span>
@@ -1469,10 +1655,32 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>I'm Venkat Chada</h1>
-                    <p class="tagline">Lead Full Stack Java Developer | 12+ Years | Spring Boot | AWS | Microservices | Angular | DevOps</p>
-                    <p>Senior Software Engineer with 12+ years of expertise in architecting enterprise solutions across banking, insurance, and healthcare sectors. Proven track record of leading teams, delivering scalable microservices, and implementing cloud-native applications on AWS. Currently driving innovation at GEICO.</p>
-                    <!-- 🔗 Social Links Section -->
+                    <div class="hero-eyebrow">Staff Engineer | Java, AWS & AI-enabled Platforms</div>
+                    <h1>Engineering cloud-native systems that turn complex enterprise workflows into reliable digital products.</h1>
+                    <p class="tagline">I build and modernize Java/Spring Boot platforms, AWS contact-center solutions, microservices, and AI-enabled user experiences for high-scale business environments.</p>
+                    <p>My work sits at the intersection of backend architecture, full stack delivery, cloud automation, and practical Agentic AI. This portfolio highlights production experience, hands-on learning projects, and a clear record of turning ambiguous business needs into maintainable software.</p>
+                    <div class="hero-capabilities" aria-label="Core capabilities">
+                        <span>Spring Boot Microservices</span>
+                        <span>AWS Connect & Lambda</span>
+                        <span>React / Angular Apps</span>
+                        <span>Agentic AI Workflows</span>
+                        <span>Terraform & CI/CD</span>
+                    </div>
+                    <div class="hero-proof" aria-label="Professional highlights">
+                        <div>
+                            <strong>12+ years</strong>
+                            <span>enterprise software engineering</span>
+                        </div>
+                        <div>
+                            <strong>Cloud-first</strong>
+                            <span>AWS, Kubernetes, serverless, IaC</span>
+                        </div>
+                        <div>
+                            <strong>Delivery leader</strong>
+                            <span>platforms, teams, production systems</span>
+                        </div>
+                    </div>
+                    <!-- Social Links Section -->
                     <div class="social-links">
                         <a href="https://github.com/vchada" target="_blank">
                             <img src="assets/images/github-icon.png" alt="GitHub" width="50" height="50">
@@ -1486,8 +1694,8 @@
                     </div>
                     <!-- End Social Links Section -->
                     <div class="cta-buttons">
-                        <a href="./resume/Venkata_Chada_Resume.docx" class="btn btn-primary" download>📄 Download Resume</a>
-                        <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
+                        <a href="./resume/Venkata_Chada_Resume.docx" class="btn btn-primary" download>Download Resume</a>
+                        <a href="#portfolio" class="btn btn-secondary">Explore Case Studies</a>
                     </div>
 
                 </div>
@@ -1526,12 +1734,12 @@
                         and mentoring teams on practical ways to bring intelligence into software products.
                     </p>
 
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">☕ Backend & Architecture</h3>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">Backend & Architecture</h3>
                     <p>Deep expertise in <strong>Java/J2EE ecosystem</strong> spanning Core Java (Collections, Multithreading, Data Structures, Exception Handling), and advanced frameworks. Extensive experience building <strong>Spring Boot microservices</strong> using Spring Core, Spring MVC, Spring AOP, Spring Web Services, and Spring Cloud for distributed systems. Proficient in implementing <strong>MVC architectures</strong> with both Spring and Struts frameworks.</p>
 
                     <p>Skilled in <strong>database technologies</strong> including Oracle, DB2, MySQL, and MongoDB for NoSQL solutions. Implemented robust persistence layers using <strong>Hibernate ORM</strong>, JDBC, and developed complex PL/SQL stored procedures and triggers. Expertise in <strong>API development</strong> - designed and implemented RESTful services using JAX-RS, Jersey, and SOAP-based web services with WSDL, UDDI, JAX-WS.</p>
 
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">☁️ Cloud & DevOps</h3>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">Cloud & DevOps</h3>
                     <p>Extensive <strong>AWS cloud experience</strong> including Lambda functions (Node.js for serverless architectures), DynamoDB, S3, CloudWatch monitoring, API Gateway for access control and security policies. Designed and deployed <strong>AWS Connect contact center solutions</strong> integrating Amazon Lex for intelligent IVR workflows, real-time customer support automation, call recording, and dynamic routing through parameterized Lambda functions.</p>
 
                     <p>Expert in <strong>Infrastructure as Code</strong> using Terraform - created reusable modules and scripts for automated AWS resource provisioning, ensuring consistency and scalability. Proficient with <strong>containerization and orchestration</strong>: managed Docker images and containers, implemented Kubernetes clusters for microservices with deployments, services, ingress controllers, auto-scaling, and high availability. Established <strong>CI/CD pipelines</strong> using Jenkins, GitHub Actions, Maven, and Ant, achieving 95% deployment success rates.</p>
@@ -1555,19 +1763,19 @@
                             <strong>DynamoDB and S3</strong> for stateful memory and context storage.
                             Through this architecture, I’ve been able to bring the emerging paradigm of autonomous LLM agents into production-grade enterprise environments.
                         </p>
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">🎨 Frontend & Full Stack</h3>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">Frontend & Full Stack</h3>
                     <p>Proficient in modern frontend development with <strong>Angular</strong> - created single-page applications with Angular Material, developed responsive B2B applications, implemented automation scripts using Protractor and Karma. Experience with <strong>React</strong> for building interactive UIs, state management with Redux. Strong foundation in <strong>web technologies</strong>: HTML5, CSS3, JavaScript, jQuery for AJAX calls and asynchronous requests, Google Web Toolkit (GWT) for enterprise applications, and Vaadin components as widgets.</p>
 
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">🔧 Integration & Messaging</h3>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">Integration & Messaging</h3>
                     <p>Implemented <strong>enterprise integration patterns</strong> using Spring Integration for complex integration flows coordinating communication between systems. Extensive experience with <strong>messaging systems</strong>: ActiveMQ and JMS for queue and topic configurations, enabling efficient message communication and managing events across distributed systems. Integrated <strong>SSO mechanisms</strong> for seamless authentication, implemented Spring Security for access control policies, and configured IBM WebSeal for secure authentication and authorization.</p>
 
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">📊 Data & Analytics</h3>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">Data & Analytics</h3>
                     <p>Proficient in <strong>data processing technologies</strong>: created ETL jobs using Pentaho and Talend for business analysis reports, implemented Elasticsearch for advanced query processing and optimization, developed search engines using Apache Lucene and SOLR with indexing on MongoDB. Experience with <strong>GraphQL</strong> - utilized subscriptions for real-time data updates, conducted performance optimizations for handling large volumes of concurrent requests.</p>
 
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">🧪 Testing & Quality</h3>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">Testing & Quality</h3>
                     <p>Strong advocate for <strong>quality assurance</strong>: built comprehensive unit tests using JUnit with 80%+ coverage, designed and executed integration tests for API endpoints, implemented end-to-end testing with Protractor. Established <strong>monitoring and observability</strong> using AWS CloudWatch, Prometheus, ELK Stack, and Splunk for tracking performance, availability, and security. Implemented centralized logging and distributed tracing for microservices.</p>
 
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">🎯 Methodologies & Tools</h3>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--accent);">Methodologies & Tools</h3>
                     <p>Experienced in <strong>Agile/Scrum methodologies</strong> - participated in sprint planning, daily scrums, and retrospectives. Proficient with project management tools: JIRA for ticket tracking, bug management, and maintaining user stories; CA Agile Central (Rally) for agile workflows; VSTS for managing development cycles. Skilled in <strong>version control</strong> using Git and SVN, and familiar with design patterns including Singleton, Factory, DAO, Session Façade, and MVC for building maintainable, scalable applications.</p>
 
                     <p style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid var(--border); font-style: italic;">Throughout my career, I've demonstrated strong leadership in mentoring teams, collaborating with business analysts to translate requirements into technical solutions, and maintaining production systems with focus on reliability, security, and performance optimization.</p>
@@ -1777,7 +1985,7 @@
                     </div>
 
                     <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border);">
-                        <h3 style="margin-bottom: 2rem; text-align: center;">🎓 Education</h3>
+                        <h3 style="margin-bottom: 2rem; text-align: center;">Education</h3>
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
 
                             <!-- Master's -->
@@ -1816,7 +2024,7 @@
                 <div class="tech-category">
                     <div class="tech-category-header" onclick="toggleCategory(this)">
                         <span class="expand-icon">▶</span>
-                        <span class="category-icon">☕</span>
+                        
                         <h3>Backend Development</h3>
                         <span class="item-count">20+ technologies</span>
                     </div>
@@ -1872,7 +2080,7 @@
                 <div class="tech-category">
                     <div class="tech-category-header" onclick="toggleCategory(this)">
                         <span class="expand-icon">▶</span>
-                        <span class="category-icon">☁️</span>
+                        
                         <h3>Cloud & DevOps</h3>
                         <span class="item-count">15+ technologies</span>
                     </div>
@@ -1922,7 +2130,7 @@
                 <div class="tech-category">
                     <div class="tech-category-header" onclick="toggleCategory(this)">
                         <span class="expand-icon">▶</span>
-                        <span class="category-icon">⚛️</span>
+                        
                         <h3>Frontend Development</h3>
                         <span class="item-count">15+ technologies</span>
                     </div>
@@ -1970,7 +2178,7 @@
                 <div class="tech-category">
                     <div class="tech-category-header" onclick="toggleCategory(this)">
                         <span class="expand-icon">▶</span>
-                        <span class="category-icon">🗄️</span>
+                        
                         <h3>Databases & Data Management</h3>
                         <span class="item-count">10+ technologies</span>
                     </div>
@@ -2007,7 +2215,7 @@
                 <div class="tech-category">
                     <div class="tech-category-header" onclick="toggleCategory(this)">
                         <span class="expand-icon">▶</span>
-                        <span class="category-icon">🔌</span>
+                        
                         <h3>APIs & Integration</h3>
                         <span class="item-count">12+ technologies</span>
                     </div>
@@ -2051,7 +2259,7 @@
                 <div class="tech-category">
                     <div class="tech-category-header" onclick="toggleCategory(this)">
                         <span class="expand-icon">▶</span>
-                        <span class="category-icon">📨</span>
+                        
                         <h3>Messaging & Event Processing</h3>
                         <span class="item-count">5+ technologies</span>
                     </div>
@@ -2078,7 +2286,7 @@
                 <div class="tech-category">
                     <div class="tech-category-header" onclick="toggleCategory(this)">
                         <span class="expand-icon">▶</span>
-                        <span class="category-icon">🔍</span>
+                        
                         <h3>Search & Analytics</h3>
                         <span class="item-count">8+ technologies</span>
                     </div>
@@ -2113,7 +2321,7 @@
                 <div class="tech-category">
                     <div class="tech-category-header" onclick="toggleCategory(this)">
                         <span class="expand-icon">▶</span>
-                        <span class="category-icon">🧪</span>
+                        
                         <h3>Testing & Quality Assurance</h3>
                         <span class="item-count">10+ technologies</span>
                     </div>
@@ -2149,7 +2357,7 @@
                 <div class="tech-category">
                     <div class="tech-category-header" onclick="toggleCategory(this)">
                         <span class="expand-icon">▶</span>
-                        <span class="category-icon">📊</span>
+                        
                         <h3>Monitoring & Observability</h3>
                         <span class="item-count">7+ technologies</span>
                     </div>
@@ -2178,7 +2386,7 @@
                 <div class="tech-category">
                     <div class="tech-category-header" onclick="toggleCategory(this)">
                         <span class="expand-icon">▶</span>
-                        <span class="category-icon">🔐</span>
+                        
                         <h3>Security & Authentication</h3>
                         <span class="item-count">8+ technologies</span>
                     </div>
@@ -2207,7 +2415,7 @@
                 <div class="tech-category">
                     <div class="tech-category-header" onclick="toggleCategory(this)">
                         <span class="expand-icon">▶</span>
-                        <span class="category-icon">🛠️</span>
+                        
                         <h3>Tools & Methodologies</h3>
                         <span class="item-count">15+ tools</span>
                     </div>
@@ -2252,7 +2460,7 @@
                 <div class="tech-category">
                     <div class="tech-category-header" onclick="toggleCategory(this)">
                         <span class="expand-icon">▶</span>
-                        <span class="category-icon">🖥️</span>
+                        
                         <h3>Application Servers & Platforms</h3>
                         <span class="item-count">6+ servers</span>
                     </div>
@@ -2280,7 +2488,7 @@
                 <div class="tech-category">
                     <div class="tech-category-header" onclick="toggleCategory(this)">
                         <span class="expand-icon">▶</span>
-                        <span class="category-icon">🚀</span>
+                        
                         <h3>Additional Technologies</h3>
                         <span class="item-count">10+ technologies</span>
                     </div>
@@ -2341,15 +2549,15 @@
             <div class="projects-grid">
                 <!-- Project 1: AWS Connect Contact Center -->
                 <div class="project-card" data-category="aws-connect aws fullstack" data-project-id="aws-connect">
-                    <div class="project-image">📞</div>
+                    <div class="project-image"><span class="project-mark">CC</span></div>
                     <div class="project-content">
                         <h3>AWS Connect Contact Center Platform</h3>
                         <p>Designed and deployed enterprise-scale contact center solution integrating AWS Connect with Amazon Lex for intelligent IVR workflows. Implemented call recording, contact flow routing, and agent queues with dynamic configuration through parameterized Lambda functions.</p>
                         <div class="project-highlights">
-                            <div class="highlight-item">✅ Real-time customer support automation</div>
-                            <div class="highlight-item">✅ Automated user provisioning & queue assignment</div>
-                            <div class="highlight-item">✅ Centralized logging via CloudWatch</div>
-                            <div class="highlight-item">✅ 40% reduction in manual configuration</div>
+                            <div class="highlight-item">Real-time customer support automation</div>
+                            <div class="highlight-item">Automated user provisioning & queue assignment</div>
+                            <div class="highlight-item">Centralized logging via CloudWatch</div>
+                            <div class="highlight-item">40% reduction in manual configuration</div>
                         </div>
                         <div class="project-tech">
                             <span class="tech-tag">AWS Connect</span>
@@ -2365,15 +2573,15 @@
 
                 <!-- Project 2: Agentic AI & Lex Bots -->
                 <div class="project-card" data-category="aws-connect aws backend" data-project-id="lex-bot">
-                    <div class="project-image">🤖</div>
+                    <div class="project-image"><span class="project-mark">AI</span></div>
                     <div class="project-content">
                         <h3>Intelligent Lex Bot & Agentic AI Integration</h3>
                         <p>Developed custom AWS Lambda functions in Node.js to enhance AWS Connect with intelligent conversational AI. Built Lex bots for automated call routing and customer intent recognition, implementing agentic AI patterns for real-time decision making.</p>
                         <div class="project-highlights">
-                            <div class="highlight-item">✅ Automated IVR interactions with NLU</div>
-                            <div class="highlight-item">✅ Real-time analytics integration</div>
-                            <div class="highlight-item">✅ 60% improvement in call routing efficiency</div>
-                            <div class="highlight-item">✅ GraphQL subscriptions for live updates</div>
+                            <div class="highlight-item">Automated IVR interactions with NLU</div>
+                            <div class="highlight-item">Real-time analytics integration</div>
+                            <div class="highlight-item">60% improvement in call routing efficiency</div>
+                            <div class="highlight-item">GraphQL subscriptions for live updates</div>
                         </div>
                         <div class="project-tech">
                             <span class="tech-tag">Amazon Lex</span>
@@ -2389,15 +2597,15 @@
 
                 <!-- Project 3: Monolith to Microservices Migration -->
                 <div class="project-card" data-category="fullstack backend aws" data-project-id="microservices">
-                    <div class="project-image">🏗️</div>
+                    <div class="project-image"><span class="project-mark">MS</span></div>
                     <div class="project-content">
                         <h3>Enterprise Monolith to Microservices Migration</h3>
                         <p>Led the migration of legacy monolithic applications to cloud-native microservices architecture. Orchestrated deployment using Docker containers and Kubernetes clusters, implementing Spring Boot microservices with RESTful APIs hosted on AWS.</p>
                         <div class="project-highlights">
-                            <div class="highlight-item">✅ Decomposed monolith into 15+ microservices</div>
-                            <div class="highlight-item">✅ 99.9% uptime with auto-scaling</div>
-                            <div class="highlight-item">✅ 70% faster deployment cycles</div>
-                            <div class="highlight-item">✅ Reduced infrastructure costs by 35%</div>
+                            <div class="highlight-item">Decomposed monolith into 15+ microservices</div>
+                            <div class="highlight-item">99.9% uptime with auto-scaling</div>
+                            <div class="highlight-item">70% faster deployment cycles</div>
+                            <div class="highlight-item">Reduced infrastructure costs by 35%</div>
                         </div>
                         <div class="project-tech">
                             <span class="tech-tag">Spring Boot</span>
@@ -2413,15 +2621,15 @@
 
                 <!-- Project 4: Full Stack Angular Dashboard -->
                 <div class="project-card" data-category="fullstack aws" data-project-id="angular-dashboard">
-                    <div class="project-image">📊</div>
+                    <div class="project-image"><span class="project-mark">BI</span></div>
                     <div class="project-content">
                         <h3>Real-Time Business Analytics Dashboard</h3>
                         <p>Built enterprise Single Page Application using Angular and Angular Material for exposing business transactional data through custom dashboards. Integrated with Spring Boot microservices and implemented real-time updates using GraphQL subscriptions.</p>
                         <div class="project-highlights">
-                            <div class="highlight-item">✅ Real-time data visualization with GraphQL</div>
-                            <div class="highlight-item">✅ Responsive design with Angular Material</div>
-                            <div class="highlight-item">✅ 50K+ daily active users</div>
-                            <div class="highlight-item">✅ 80% test coverage with Protractor/Karma</div>
+                            <div class="highlight-item">Real-time data visualization with GraphQL</div>
+                            <div class="highlight-item">Responsive design with Angular Material</div>
+                            <div class="highlight-item">50K+ daily active users</div>
+                            <div class="highlight-item">80% test coverage with Protractor/Karma</div>
                         </div>
                         <div class="project-tech">
                             <span class="tech-tag">Angular</span>
@@ -2437,15 +2645,15 @@
 
                 <!-- Project 5: Serverless API Gateway -->
                 <div class="project-card" data-category="backend aws" data-project-id="serverless-api">
-                    <div class="project-image">⚡</div>
+                    <div class="project-image"><span class="project-mark">API</span></div>
                     <div class="project-content">
                         <h3>Serverless API Platform with Lambda & DynamoDB</h3>
                         <p>Architected serverless API layer using AWS Lambda functions (Node.js) for CRUD operations on DynamoDB. Implemented API Gateway for rate limiting, throttling, and security policies, processing 100K+ requests daily.</p>
                         <div class="project-highlights">
-                            <div class="highlight-item">✅ 100% serverless architecture</div>
-                            <div class="highlight-item">✅ Sub-100ms response times</div>
-                            <div class="highlight-item">✅ Cost reduction of 60%</div>
-                            <div class="highlight-item">✅ Auto-scaling to handle traffic spikes</div>
+                            <div class="highlight-item">100% serverless architecture</div>
+                            <div class="highlight-item">Sub-100ms response times</div>
+                            <div class="highlight-item">Cost reduction of 60%</div>
+                            <div class="highlight-item">Auto-scaling to handle traffic spikes</div>
                         </div>
                         <div class="project-tech">
                             <span class="tech-tag">AWS Lambda</span>
@@ -2460,15 +2668,15 @@
 
                 <!-- Project 6: Infrastructure as Code -->
                 <div class="project-card" data-category="aws backend" data-project-id="terraform">
-                    <div class="project-image">🏛️</div>
+                    <div class="project-image"><span class="project-mark">IaC</span></div>
                     <div class="project-content">
                         <h3>Terraform Infrastructure Automation</h3>
                         <p>Developed reusable Terraform modules and scripts to automate AWS resource provisioning for contact center environment. Implemented infrastructure as code for AWS Connect instances, Lambda functions, and networking configurations.</p>
                         <div class="project-highlights">
-                            <div class="highlight-item">✅ Automated deployment across 5+ environments</div>
-                            <div class="highlight-item">✅ 90% reduction in provisioning time</div>
-                            <div class="highlight-item">✅ Consistent infrastructure configuration</div>
-                            <div class="highlight-item">✅ Version-controlled IaC workflows</div>
+                            <div class="highlight-item">Automated deployment across 5+ environments</div>
+                            <div class="highlight-item">90% reduction in provisioning time</div>
+                            <div class="highlight-item">Consistent infrastructure configuration</div>
+                            <div class="highlight-item">Version-controlled IaC workflows</div>
                         </div>
                         <div class="project-tech">
                             <span class="tech-tag">Terraform</span>
@@ -2483,15 +2691,15 @@
 
                 <!-- Project 7: ETL & Data Analytics -->
                 <div class="project-card" data-category="backend aws" data-project-id="etl-pipeline">
-                    <div class="project-image">📈</div>
+                    <div class="project-image"><span class="project-mark">ETL</span></div>
                     <div class="project-content">
                         <h3>ETL Pipeline & Business Intelligence Platform</h3>
                         <p>Created ETL jobs using Pentaho and Talend for business analysis reports. Processed millions of records daily from multiple data sources, transforming and loading into data warehouses for real-time analytics.</p>
                         <div class="project-highlights">
-                            <div class="highlight-item">✅ Processing 5M+ records daily</div>
-                            <div class="highlight-item">✅ Real-time data transformation</div>
-                            <div class="highlight-item">✅ Automated reporting workflows</div>
-                            <div class="highlight-item">✅ 85% reduction in manual data processing</div>
+                            <div class="highlight-item">Processing 5M+ records daily</div>
+                            <div class="highlight-item">Real-time data transformation</div>
+                            <div class="highlight-item">Automated reporting workflows</div>
+                            <div class="highlight-item">85% reduction in manual data processing</div>
                         </div>
                         <div class="project-tech">
                             <span class="tech-tag">Pentaho</span>
@@ -2506,15 +2714,15 @@
 
                 <!-- Project 8: React Customer Portal -->
                 <div class="project-card" data-category="fullstack aws" data-project-id="react-portal">
-                    <div class="project-image">🌐</div>
+                    <div class="project-image"><span class="project-mark">UX</span></div>
                     <div class="project-content">
                         <h3>Customer Self-Service Portal (React)</h3>
                         <p>Built modern customer-facing web application using React with Redux for state management. Integrated with Spring Boot microservices backend, implementing real-time features using GraphQL and WebSocket connections.</p>
                         <div class="project-highlights">
-                            <div class="highlight-item">✅ 200K+ monthly active users</div>
-                            <div class="highlight-item">✅ 95+ Lighthouse performance score</div>
-                            <div class="highlight-item">✅ Real-time notifications via WebSocket</div>
-                            <div class="highlight-item">✅ Responsive mobile-first design</div>
+                            <div class="highlight-item">200K+ monthly active users</div>
+                            <div class="highlight-item">95+ Lighthouse performance score</div>
+                            <div class="highlight-item">Real-time notifications via WebSocket</div>
+                            <div class="highlight-item">Responsive mobile-first design</div>
                         </div>
                         <div class="project-tech">
                             <span class="tech-tag">React</span>
@@ -2530,15 +2738,15 @@
 
                 <!-- Project 9: Monitoring & Observability -->
                 <div class="project-card" data-category="backend aws" data-project-id="monitoring">
-                    <div class="project-image">🔍</div>
+                    <div class="project-image"><span class="project-mark">OBS</span></div>
                     <div class="project-content">
                         <h3>Enterprise Monitoring & Observability Platform</h3>
                         <p>Implemented comprehensive monitoring and logging solutions using AWS CloudWatch, Prometheus, and ELK Stack. Established centralized logging and distributed tracing for microservices, ensuring 99.9% system availability.</p>
                         <div class="project-highlights">
-                            <div class="highlight-item">✅ 99.9% system uptime achieved</div>
-                            <div class="highlight-item">✅ Real-time alerting & notifications</div>
-                            <div class="highlight-item">✅ Performance tracking for 50+ services</div>
-                            <div class="highlight-item">✅ MTTR reduced by 75%</div>
+                            <div class="highlight-item">99.9% system uptime achieved</div>
+                            <div class="highlight-item">Real-time alerting & notifications</div>
+                            <div class="highlight-item">Performance tracking for 50+ services</div>
+                            <div class="highlight-item">MTTR reduced by 75%</div>
                         </div>
                         <div class="project-tech">
                             <span class="tech-tag">CloudWatch</span>
@@ -2553,15 +2761,15 @@
 
                 <!-- Project 10: Kubernetes Orchestration -->
                 <div class="project-card" data-category="backend aws" data-project-id="kubernetes">
-                    <div class="project-image">☸️</div>
+                    <div class="project-image"><span class="project-mark">K8s</span></div>
                     <div class="project-content">
                         <h3>Kubernetes Microservices Orchestration</h3>
                         <p>Implemented Kubernetes clusters to orchestrate containerized microservices, enabling efficient resource utilization and high availability. Configured deployments, services, ingress controllers, and auto-scaling policies.</p>
                         <div class="project-highlights">
-                            <div class="highlight-item">✅ Managing 30+ microservices</div>
-                            <div class="highlight-item">✅ Auto-scaling based on load</div>
-                            <div class="highlight-item">✅ Zero-downtime deployments</div>
-                            <div class="highlight-item">✅ 50% improved resource utilization</div>
+                            <div class="highlight-item">Managing 30+ microservices</div>
+                            <div class="highlight-item">Auto-scaling based on load</div>
+                            <div class="highlight-item">Zero-downtime deployments</div>
+                            <div class="highlight-item">50% improved resource utilization</div>
                         </div>
                         <div class="project-tech">
                             <span class="tech-tag">Kubernetes</span>
@@ -2584,32 +2792,52 @@
             <h2 class="section-title">Certifications & Achievements</h2>
             <div class="cert-grid">
                 <div class="cert-card">
-                    <div class="cert-icon">☁️</div>
-                    <h3>AWS Certified Solutions Architect</h3>
-                    <p class="cert-issuer">Amazon Web Services</p>
-                    <p class="cert-date">Associate Level • 2023</p>
+                    <img class="cert-badge" src="https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png" alt="AWS Certified Solutions Architect Associate badge">
+                    <div>
+                        <h3>AWS Certified Solutions Architect - Associate</h3>
+                        <p class="cert-issuer">Amazon Web Services Training and Certification</p>
+                        <p class="cert-date">Associate Level</p>
+                        <a class="cert-link" href="https://www.credly.com/org/amazon-web-services/badge/aws-certified-solutions-architect-associate" target="_blank" rel="noopener">View badge details</a>
+                    </div>
                 </div>
 
                 <div class="cert-card">
-                    <div class="cert-icon">🔧</div>
-                    <h3>HashiCorp Terraform Certified</h3>
-                    <p class="cert-issuer">HashiCorp</p>
-                    <p class="cert-date">Associate Developer • 2023</p>
+                    <img class="cert-badge" src="https://images.credly.com/images/0dc62494-dc94-469a-83af-e35309f27356/blob" alt="HashiCorp Certified Terraform Associate badge">
+                    <div>
+                        <h3>HashiCorp Certified: Terraform Associate</h3>
+                        <p class="cert-issuer">HashiCorp</p>
+                        <p class="cert-date">Infrastructure as Code Certification</p>
+                        <a class="cert-link" href="https://www.credly.com/org/hashicorp/badge/hashicorp-certified-terraform-associate-003" target="_blank" rel="noopener">View badge details</a>
+                    </div>
                 </div>
 
                 <div class="cert-card">
-                    <div class="cert-icon">☕</div>
-                    <h3>Oracle Certified Java Professional</h3>
-                    <p class="cert-issuer">Oracle Corporation</p>
-                    <p class="cert-date">Java SE 11 Developer • 2022</p>
+                    <img class="cert-badge" src="https://catalog-oracle.com/img/badge1.png" alt="Oracle Certified Professional Java SE 11 Developer badge">
+                    <div>
+                        <h3>Oracle Certified Professional: Java SE 11 Developer</h3>
+                        <p class="cert-issuer">Oracle</p>
+                        <p class="cert-date">Java SE 11 Developer</p>
+                        <a class="cert-link" href="https://www.credly.com/org/oracle/badge/oracle-certified-professional-java-se-11-developer" target="_blank" rel="noopener">View badge details</a>
+                    </div>
                 </div>
             </div>
 
-            <div style="margin-top: 3rem; text-align: center; padding: 2rem; background: var(--card-bg); border-radius: 10px;">
-                <h3 style="margin-bottom: 1rem;">Additional Achievements</h3>
-                <p style="color: var(--text-secondary);">🏆 Employee Excellence Award for Cloud Migration Initiative (2023)<br>
-                🌟 Mentored 15+ junior developers in full-stack development<br>
-                📚 Active contributor to open-source Java and React projects</p>
+            <div class="achievement-panel">
+                <h3>Additional Achievements</h3>
+                <div class="achievement-list">
+                    <div class="achievement-item">
+                        <strong>Cloud Migration Recognition</strong>
+                        Employee Excellence Award for enterprise modernization work.
+                    </div>
+                    <div class="achievement-item">
+                        <strong>Engineering Mentorship</strong>
+                        Mentored 15+ junior developers across Java and full stack delivery.
+                    </div>
+                    <div class="achievement-item">
+                        <strong>Open Source Learning</strong>
+                        Building Java, AI, and microservice projects for public GitHub visibility.
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -2620,11 +2848,11 @@
             <h2 class="section-title">Latest Blog Posts</h2>
             <div class="blog-grid">
                 <div class="blog-card" onclick="openBlogModal('blog1')">
-                    <div class="blog-thumbnail">📝</div>
+                    <div class="blog-thumbnail"><span class="blog-mark">POST</span></div>
                     <div class="blog-content">
                         <div class="blog-meta">
-                            <span>📅 Oct 15, 2024</span>
-                            <span>⏱️ 8 min read</span>
+                            <span>Oct 15, 2024</span>
+                            <span>8 min read</span>
                         </div>
                         <h3>Why I Love Building Microservices with Spring Boot and AWS Lambda</h3>
                         <p>Exploring the synergy between Spring Boot microservices and serverless AWS Lambda functions for building scalable, cost-effective cloud applications.</p>
@@ -2637,11 +2865,11 @@
                 </div>
 
                 <div class="blog-card" onclick="openBlogModal('blog2')">
-                    <div class="blog-thumbnail">🚀</div>
+                    <div class="blog-thumbnail"><span class="blog-mark">CASE</span></div>
                     <div class="blog-content">
                         <div class="blog-meta">
-                            <span>📅 Sep 28, 2024</span>
-                            <span>⏱️ 10 min read</span>
+                            <span>Sep 28, 2024</span>
+                            <span>10 min read</span>
                         </div>
                         <h3>From Monolith to Microservices: My AWS Migration Journey</h3>
                         <p>A comprehensive guide on migrating legacy monolithic applications to cloud-native microservices architecture on AWS, with real-world challenges and solutions.</p>
@@ -2654,11 +2882,11 @@
                 </div>
 
                 <div class="blog-card" onclick="openBlogModal('blog3')">
-                    <div class="blog-thumbnail">⚙️</div>
+                    <div class="blog-thumbnail"><span class="blog-mark">IaC</span></div>
                     <div class="blog-content">
                         <div class="blog-meta">
-                            <span>📅 Sep 10, 2024</span>
-                            <span>⏱️ 7 min read</span>
+                            <span>Sep 10, 2024</span>
+                            <span>7 min read</span>
                         </div>
                         <h3>Automating Cloud Infrastructure with Terraform and Jenkins</h3>
                         <p>Best practices for implementing Infrastructure as Code using Terraform, integrated with Jenkins CI/CD pipelines for automated deployments and rollbacks.</p>
@@ -2671,11 +2899,11 @@
                 </div>
 
                 <div class="blog-card" onclick="openBlogModal('blog4')">
-                    <div class="blog-thumbnail">💡</div>
+                    <div class="blog-thumbnail"><span class="blog-mark">BEST</span></div>
                     <div class="blog-content">
                         <div class="blog-meta">
-                            <span>📅 Aug 22, 2024</span>
-                            <span>⏱️ 12 min read</span>
+                            <span>Aug 22, 2024</span>
+                            <span>12 min read</span>
                         </div>
                         <h3>Full Stack Development Best Practices for Enterprise Apps</h3>
                         <p>Essential patterns and practices for building maintainable, scalable enterprise applications using Java Spring Boot backends and React frontends.</p>
@@ -2712,19 +2940,19 @@
                 </form>
 
                 <div class="social-links">
-                    <a href="https://github.com" class="social-icon" title="GitHub" target="_blank">
-                        <span>💻</span>
+                    <a href="https://github.com/vchada" class="social-icon" title="GitHub" target="_blank" rel="noopener">
+                        <span>GH</span>
                     </a>
-                    <a href="https://linkedin.com" class="social-icon" title="LinkedIn" target="_blank">
-                        <span>💼</span>
+                    <a href="https://www.linkedin.com/in/venkat-chada-67bbb6125/" class="social-icon" title="LinkedIn" target="_blank" rel="noopener">
+                        <span>in</span>
                     </a>
-                    <a href="mailto:venkat@example.com" class="social-icon" title="Email">
-                        <span>📧</span>
+                    <a href="mailto:chada.venkata@gmail.com" class="social-icon" title="Email">
+                        <span>@</span>
                     </a>
                 </div>
 
                 <p class="contact-note">
-                    "Let's build something awesome together — I'm always open to discuss innovative projects and collaborations."
+                    Open to Agentic AI, Java full stack, cloud modernization, and platform engineering roles.
                 </p>
             </div>
         </div>
@@ -2734,8 +2962,8 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Venkat Chada. All rights reserved.</p>
-                <p style="margin-top: 0.5rem;">Built with ❤️ using HTML, CSS, and JavaScript</p>
+                <p>&copy; 2026 Venkat Chada. All rights reserved.</p>
+                <p style="margin-top: 0.5rem;">Built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.</p>
             </div>
         </div>
     </footer>
@@ -2843,7 +3071,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Project data for modals
 const projectData = {
     'aws-connect': {
-        icon: '📞',
+        icon: 'CC',
         title: 'AWS Connect Contact Center Platform',
         category: 'aws-connect aws fullstack',
         description: 'Designed and deployed enterprise-scale contact center solution integrating AWS Connect with Amazon Lex for intelligent IVR workflows. Implemented call recording, contact flow routing, and agent queues with dynamic configuration through parameterized Lambda functions. Automated user provisioning and queue assignment using Amazon Connect API, improving onboarding efficiency.',
@@ -2856,7 +3084,7 @@ const projectData = {
         tech: ['AWS Connect', 'Amazon Lex', 'Lambda (Node.js)', 'DynamoDB', 'S3', 'CloudWatch', 'IVR Workflows', 'API Gateway']
     },
     'lex-bot': {
-        icon: '🤖',
+        icon: 'AI',
         title: 'Intelligent Lex Bot & Agentic AI Integration',
         category: 'aws-connect aws backend',
         description: 'Developed custom AWS Lambda functions in Node.js to enhance AWS Connect with intelligent conversational AI. Built Lex bots for automated call routing and customer intent recognition, implementing agentic AI patterns for real-time decision making. Utilized GraphQL subscriptions for real-time data updates and notifications.',
@@ -2869,7 +3097,7 @@ const projectData = {
         tech: ['Amazon Lex', 'AWS Lambda', 'Node.js', 'Agentic AI', 'GraphQL', 'DynamoDB', 'CloudWatch', 'NLU']
     },
     'microservices': {
-        icon: '🏗️',
+        icon: 'MS',
         title: 'Enterprise Monolith to Microservices Migration',
         category: 'fullstack backend aws',
         description: 'Led the migration of legacy monolithic applications to cloud-native microservices architecture. Orchestrated deployment using Docker containers and Kubernetes clusters, implementing Spring Boot microservices with RESTful APIs hosted on AWS. Established comprehensive CI/CD pipelines and automated testing frameworks.',
@@ -2882,7 +3110,7 @@ const projectData = {
         tech: ['Spring Boot', 'Kubernetes', 'Docker', 'AWS ECS', 'Terraform', 'Jenkins CI/CD', 'Hibernate', 'RESTful APIs']
     },
     'angular-dashboard': {
-        icon: '📊',
+        icon: 'BI',
         title: 'Real-Time Business Analytics Dashboard',
         category: 'fullstack aws',
         description: 'Built enterprise Single Page Application using Angular and Angular Material for exposing business transactional data through custom dashboards. Integrated with Spring Boot microservices and implemented real-time updates using GraphQL subscriptions. Created automation scripts using Protractor and Karma for comprehensive testing coverage.',
@@ -2895,7 +3123,7 @@ const projectData = {
         tech: ['Angular', 'Angular Material', 'GraphQL', 'Spring Boot', 'DynamoDB', 'Protractor', 'Karma', 'WebSocket']
     },
     'serverless-api': {
-        icon: '⚡',
+        icon: 'API',
         title: 'Serverless API Platform with Lambda & DynamoDB',
         category: 'backend aws',
         description: 'Architected serverless API layer using AWS Lambda functions (Node.js) for CRUD operations on DynamoDB. Implemented API Gateway for rate limiting, throttling, and security policies. Built highly scalable solution processing over 100K+ requests daily with sub-100ms response times.',
@@ -2908,7 +3136,7 @@ const projectData = {
         tech: ['AWS Lambda', 'Node.js', 'DynamoDB', 'API Gateway', 'CloudWatch', 'S3', 'Rate Limiting']
     },
     'terraform': {
-        icon: '🏛️',
+        icon: 'IaC',
         title: 'Terraform Infrastructure Automation',
         category: 'aws backend',
         description: 'Developed reusable Terraform modules and scripts to automate AWS resource provisioning for contact center environment. Implemented infrastructure as code for AWS Connect instances, Lambda functions, and networking configurations. Established version-controlled IaC workflows with automated deployment pipelines.',
@@ -2921,7 +3149,7 @@ const projectData = {
         tech: ['Terraform', 'AWS', 'CloudFormation', 'VSTS', 'Git', 'Jenkins', 'Infrastructure as Code']
     },
     'etl-pipeline': {
-        icon: '📈',
+        icon: 'ETL',
         title: 'ETL Pipeline & Business Intelligence Platform',
         category: 'backend aws',
         description: 'Created ETL jobs using Pentaho and Talend for business analysis reports. Processed millions of records daily from multiple data sources, transforming and loading into data warehouses for real-time analytics. Implemented automated workflows for data validation and quality checks.',
@@ -2934,7 +3162,7 @@ const projectData = {
         tech: ['Pentaho', 'Talend', 'DynamoDB', 'S3', 'Lambda', 'CloudWatch', 'ETL', 'Data Warehousing']
     },
     'react-portal': {
-        icon: '🌐',
+        icon: 'UX',
         title: 'Customer Self-Service Portal (React)',
         category: 'fullstack aws',
         description: 'Built modern customer-facing web application using React with Redux for state management. Integrated with Spring Boot microservices backend, implementing real-time features using GraphQL and WebSocket connections. Achieved 95+ Lighthouse performance score with optimized bundle sizes and lazy loading.',
@@ -2947,7 +3175,7 @@ const projectData = {
         tech: ['React', 'Redux', 'Spring Boot', 'GraphQL', 'AWS', 'Docker', 'Jest', 'WebSocket', 'PWA']
     },
     'monitoring': {
-        icon: '🔍',
+        icon: 'OBS',
         title: 'Enterprise Monitoring & Observability Platform',
         category: 'backend aws',
         description: 'Implemented comprehensive monitoring and logging solutions using AWS CloudWatch, Prometheus, and ELK Stack. Established centralized logging and distributed tracing for microservices, ensuring 99.9% system availability. Built custom dashboards for real-time performance tracking and alerting.',
@@ -2960,7 +3188,7 @@ const projectData = {
         tech: ['CloudWatch', 'Prometheus', 'ELK Stack', 'Grafana', 'Kubernetes', 'Docker', 'Distributed Tracing']
     },
     'kubernetes': {
-        icon: '☸️',
+        icon: 'K8s',
         title: 'Kubernetes Microservices Orchestration',
         category: 'backend aws',
         description: 'Implemented Kubernetes clusters to orchestrate containerized microservices, enabling efficient resource utilization and high availability. Configured deployments, services, ingress controllers, and auto-scaling policies. Managed 30+ microservices with zero-downtime deployment strategies.',
@@ -3061,12 +3289,12 @@ document.addEventListener('DOMContentLoaded', function() {
         <p id="modal-description" class="modal-description"></p>
         
         <div class="modal-highlights">
-            <h3>🎯 Key Achievements</h3>
+            <h3>Key Achievements</h3>
             <div id="modal-highlights"></div>
         </div>
         
         <div class="modal-tech">
-            <h3>💻 Technologies Used</h3>
+            <h3>Technologies Used</h3>
             <div id="modal-tech-tags" class="modal-tech-grid"></div>
         </div>
     </div>

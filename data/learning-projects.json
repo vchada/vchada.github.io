@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Agentic Todo Copilot",
+    "path": "projects/agentic-todo-copilot",
+    "summary": "AI-assisted todo app that converts natural language goals into prioritized tasks.",
+    "stack": ["Java 21", "Spring Boot 3", "LangChain4j", "React", "PostgreSQL"]
+  },
+  {
+    "name": "Smart Kanban Board",
+    "path": "projects/smart-kanban-board",
+    "summary": "Realtime Kanban board with drag-and-drop tasks, team updates, and API-driven workflow states.",
+    "stack": ["Java 21", "Spring Boot", "React", "TypeScript", "WebSocket"]
+  },
+  {
+    "name": "RAG Knowledge Hub",
+    "path": "projects/rag-knowledge-hub",
+    "summary": "Document Q&A app using embeddings, vector search, citations, and grounded answers.",
+    "stack": ["Spring AI", "PostgreSQL", "pgvector", "React", "Docker"]
+  },
+  {
+    "name": "AI Resume Screener",
+    "path": "projects/ai-resume-screener",
+    "summary": "Recruiting assistant that extracts skills, compares job fit, and explains gaps.",
+    "stack": ["Spring Boot", "React", "OpenAI-compatible APIs", "Docker"]
+  },
+  {
+    "name": "Ecommerce Order API",
+    "path": "projects/ecommerce-order-api",
+    "summary": "Order-management microservice with events, validation, and integration tests.",
+    "stack": ["Spring Boot", "Kafka", "PostgreSQL", "Testcontainers"]
+  },
+  {
+    "name": "Realtime Support Chat",
+    "path": "projects/realtime-support-chat",
+    "summary": "Customer support chat prototype with WebSocket messaging and agent assignment.",
+    "stack": ["Spring WebSocket", "React", "Redis", "Docker"]
+  },
+  {
+    "name": "Expense Insights API",
+    "path": "projects/expense-insights-api",
+    "summary": "Secure expense tracker API with categories, budgets, and monthly insights.",
+    "stack": ["Spring Boot", "JWT", "PostgreSQL", "Flyway"]
+  },
+  {
+    "name": "Inventory Microservice",
+    "path": "projects/inventory-microservice",
+    "summary": "Inventory service with stock reservations, Redis caching, and OpenAPI docs.",
+    "stack": ["Spring Boot", "Redis", "Docker", "OpenAPI"]
+  },
+  {
+    "name": "DevOps Release Dashboard",
+    "path": "projects/devops-release-dashboard",
+    "summary": "Dashboard for deployment history, build status, and release notes.",
+    "stack": ["Spring Boot", "GitHub Actions API", "React", "TypeScript"]
+  },
+  {
+    "name": "Interview Prep Agent",
+    "path": "projects/interview-prep-agent",
+    "summary": "Agentic study assistant for Java, Spring, system design, and AI interview practice.",
+    "stack": ["Spring Boot", "LangChain4j", "React", "Vector search"]
+  }
+]
